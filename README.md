@@ -29,12 +29,12 @@
     From the root directory execute:
     robot -d results tests/Plivo-CouponTesting-Positive.robot
     
-    If need to change the title of report and log
+    If need to change the title of report and log: 
     robot -d results --reporttitle "Give A TITLE" --logtitle "Give A TITLE" tests
     
     If need to get report with timestamp and which helps in not overwriting the report file in the next run
     : robot -d results -T tests/Plivo-CouponTesting-Positive.robot
     
-    If need to set the level to debug and run
+    If need to set the level to debug and run: 
     robot -d results -L debug tests/Plivo-CouponTesting-Positive.robot
     
