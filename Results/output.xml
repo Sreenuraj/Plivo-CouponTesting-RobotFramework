@@ -1,0 +1,1644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.3 on darwin)" generated="20180512 13:38:00.600">
+<suite id="s1" name="Plivo-CouponTesting-Positive" source="/Sreenu/Robort-Framework/Plivo-CouponTesting-RobotFramework/tests/Plivo-CouponTesting-Positive.robot">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:00.727" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20180512 13:38:00.727" endtime="20180512 13:38:02.405"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180512 13:38:02.405" endtime="20180512 13:38:02.527"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:00.726" endtime="20180512 13:38:02.527"></status>
+</kw>
+<test id="s1-t1" name="User should be able to &quot;login&quot;">
+<kw name="Login to the website" library="Plivo_app">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:02.529" level="INFO">Opening url 'https://manage.plivo.com/accounts/login/'</msg>
+<status status="PASS" starttime="20180512 13:38:02.529" endtime="20180512 13:38:07.724"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:02.529" endtime="20180512 13:38:07.724"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${LANDING_PAGE_TEXT}</arg>
+</arguments>
+<status status="PASS" starttime="20180512 13:38:07.725" endtime="20180512 13:38:07.738"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${LOGIN_USER_ID_TEXTBOX}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:07.749" level="INFO">Current page contains element 'id=id_username'.</msg>
+<status status="PASS" starttime="20180512 13:38:07.738" endtime="20180512 13:38:07.749"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${LOGIN_USER_PSW_TEXTBOX}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:07.760" level="INFO">Current page contains element 'id=id_password'.</msg>
+<status status="PASS" starttime="20180512 13:38:07.749" endtime="20180512 13:38:07.760"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:07.724" endtime="20180512 13:38:07.760"></status>
+</kw>
+<kw name="Attempt Login with Valid Credentials" library="SignIn">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_USER_ID_TEXTBOX}</arg>
+<arg>${USER_ID}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:07.761" level="INFO">Typing text 'plivoiview@gmail.com' into text field 'id=id_username'.</msg>
+<status status="PASS" starttime="20180512 13:38:07.761" endtime="20180512 13:38:07.867"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_USER_PSW_TEXTBOX}</arg>
+<arg>${USER_PSW}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:07.868" level="INFO">Typing password into text field 'id=id_password'.</msg>
+<status status="PASS" starttime="20180512 13:38:07.868" endtime="20180512 13:38:07.935"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:07.936" level="INFO">Clicking button 'id=login-sub'.</msg>
+<status status="PASS" starttime="20180512 13:38:07.936" endtime="20180512 13:38:08.005"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:07.760" endtime="20180512 13:38:08.005"></status>
+</kw>
+<kw name="Verify Login Successful" library="SignIn">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${DASHBOARD_TEXT}</arg>
+</arguments>
+<status status="PASS" starttime="20180512 13:38:08.005" endtime="20180512 13:38:13.391"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${DASHBOARD_TEXT}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:13.399" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" starttime="20180512 13:38:13.391" endtime="20180512 13:38:13.399"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:08.005" endtime="20180512 13:38:13.399"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:02.528" endtime="20180512 13:38:13.399"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20180512 13:38:02.527" endtime="20180512 13:38:13.400" critical="yes"></status>
+</test>
+<test id="s1-t2" name="User should be able to able to go to &quot;Account&quot; page">
+<kw name="Navigate to Account Page" library="Plivo_app">
+<kw name="Verify Login Nav Present" library="LoginNav">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${LOGIN_NAV_BAR}</arg>
+</arguments>
+<status status="PASS" starttime="20180512 13:38:13.402" endtime="20180512 13:38:13.413"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${ACCOUNT_LINK}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:13.425" level="INFO">Current page contains element 'xpath=//div[@id='wrapper']//a[contains(text(),'Account')]'.</msg>
+<status status="PASS" starttime="20180512 13:38:13.413" endtime="20180512 13:38:13.425"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:13.401" endtime="20180512 13:38:13.425"></status>
+</kw>
+<kw name="Navigate to Account Page" library="LoginNav">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${ACCOUNT_LINK}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:13.426" level="INFO">Clicking link 'xpath=//div[@id='wrapper']//a[contains(text(),'Account')]'.</msg>
+<status status="PASS" starttime="20180512 13:38:13.426" endtime="20180512 13:38:13.489"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${SUB_ACC_LINK_TEXT}</arg>
+</arguments>
+<status status="PASS" starttime="20180512 13:38:13.489" endtime="20180512 13:38:14.824"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${SUB_ACC_LINK_TEXT}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:14.834" level="INFO">Current page contains text 'New Sub Account'.</msg>
+<status status="PASS" starttime="20180512 13:38:14.824" endtime="20180512 13:38:14.834"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:13.425" endtime="20180512 13:38:14.834"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:13.401" endtime="20180512 13:38:14.834"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20180512 13:38:13.400" endtime="20180512 13:38:14.834" critical="yes"></status>
+</test>
+<test id="s1-t3" name="User should be able to go to &quot;Payments&quot; page">
+<kw name="Navigate to Payment Page" library="Plivo_app">
+<kw name="Verify Dash Nav Present" library="DashNavAccountPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${SUB_ACC_LINK_TEXT}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:14.844" level="INFO">Current page contains text 'New Sub Account'.</msg>
+<status status="PASS" starttime="20180512 13:38:14.836" endtime="20180512 13:38:14.844"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:14.836" endtime="20180512 13:38:14.845"></status>
+</kw>
+<kw name="Navigate to Payment Page" library="DashNavAccountPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${PAYMENT_LINK}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:14.845" level="INFO">Clicking link 'xpath=//a[@href='/payments/recharge/']'.</msg>
+<status status="PASS" starttime="20180512 13:38:14.845" endtime="20180512 13:38:14.904"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${PAYMENT_NAV_BAR_TEXT}</arg>
+</arguments>
+<status status="PASS" starttime="20180512 13:38:14.904" endtime="20180512 13:38:17.010"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${ADD_CARD_MSG}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:17.026" level="INFO">Current page contains text 'Add a card'.</msg>
+<status status="PASS" starttime="20180512 13:38:17.010" endtime="20180512 13:38:17.026"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:14.845" endtime="20180512 13:38:17.026"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:14.835" endtime="20180512 13:38:17.026"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20180512 13:38:14.835" endtime="20180512 13:38:17.026" critical="yes"></status>
+</test>
+<test id="s1-t4" name="User should be able to &quot;Redeem a Coupon&quot;">
+<kw name="Select redeem a coupon option" library="Plivo_app">
+<kw name="Go to redeem a coupon option" library="PaymentPage">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180512 13:38:20.030" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20180512 13:38:17.028" endtime="20180512 13:38:20.030"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${REDEEM_COUPON_LINK}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:20.031" level="INFO">Clicking link 'xpath=//div[@class='redeem-no-card']/a[contains(text(),'Redeem a coupon code instead')]'.</msg>
+<status status="PASS" starttime="20180512 13:38:20.030" endtime="20180512 13:38:20.089"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${COUPON_ALERT_TEXT}</arg>
+</arguments>
+<status status="PASS" starttime="20180512 13:38:20.089" endtime="20180512 13:38:20.101"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${COUPON_INPUT_BOX}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:20.115" level="INFO">Current page contains element 'id=coupon'.</msg>
+<status status="PASS" starttime="20180512 13:38:20.102" endtime="20180512 13:38:20.115"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:17.028" endtime="20180512 13:38:20.115"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:17.027" endtime="20180512 13:38:20.115"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20180512 13:38:17.027" endtime="20180512 13:38:20.115" critical="yes"></status>
+</test>
+<test id="s1-t5" name="User should be able to &quot;Enter the coupon and submit&quot;">
+<kw name="Redeem the coupon" library="Plivo_app">
+<kw name="Input Coupon and Submit" library="CouponAlert">
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20180512 13:38:20.117" endtime="20180512 13:38:20.121"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180512 13:38:23.122" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20180512 13:38:20.121" endtime="20180512 13:38:23.122"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${COUPON_INPUT_BOX}</arg>
+<arg>${COUPONCODE}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:23.123" level="INFO">Typing text 'COUPONCODE' into text field 'id=coupon'.</msg>
+<status status="PASS" starttime="20180512 13:38:23.122" endtime="20180512 13:38:23.208"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${COUPON_SUBMIT_BUTTON}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:23.209" level="INFO">Clicking link 'xpath=//a[@onclick='activate_coupon()']'.</msg>
+<status status="PASS" starttime="20180512 13:38:23.209" endtime="20180512 13:38:23.271"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180512 13:38:26.274" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20180512 13:38:23.271" endtime="20180512 13:38:26.275"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:20.117" endtime="20180512 13:38:26.275"></status>
+</kw>
+<kw name="Enter a Valid Coupon" library="CouponAlert">
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${COUPON_ERROR_ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180512 13:38:26.298" level="INFO">&lt;!DOCTYPE html&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;&lt;head&gt;
+        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+        &lt;meta name="keywords" content="plivo, plivo.com, plivo cloud, voip, cloud telephony, api, plivo sip, hosted pbx, cloud pbx,&amp;#10;        freeswitch api, asterisk api, cloud ivr, ivr, open source twilio, twilio alternative" /&gt;
+        &lt;meta name="description" content="Plivo - Voice and SMS APIs" /&gt;
+        &lt;title&gt;     Plivo |     Recharge &lt;/title&gt;
+
+
+        
+        &lt;link href="https://plivostatic.s3.amazonaws.com/css/bootstrap.min.css" rel="stylesheet" /&gt;
+        &lt;link href="https://plivostatic.s3.amazonaws.com/css/style.css" rel="stylesheet" type="text/css" /&gt;
+        
+        &lt;!--link href="style/bootstrap-responsive.css" rel="stylesheet"--&gt;
+
+        
+        
+        &lt;link href="https://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic" rel="stylesheet" type="text/css" /&gt;
+        
+
+        &lt;link rel="shortcut icon" href="https://plivostatic.s3.amazonaws.com/images/favicon-white-png.png" /&gt;
+        &lt;link rel="apple-touch-icon" href="https://plivostatic.s3.amazonaws.com/images/favicon-white-png.png" /&gt;
+        &lt;link rel="apple-touch-icon" sizes="72x72" href="https://plivostatic.s3.amazonaws.com/images/favicon-white-png.png" /&gt;
+        &lt;link rel="apple-touch-icon" sizes="114x114" href="https://plivostatic.s3.amazonaws.com/images/favicon-white-png.png" /&gt;
+
+        &lt;style&gt;
+            .uln { border-bottom: solid;}
+        &lt;/style&gt;
+
+        &lt;!-- GA universal tracking starts--&gt;
+        &lt;script type="text/javascript" async="" src="//doug1izaerwt3.cloudfront.net/d120fc047f6354d46e364788e2aea1ed87fd794b.1.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" async="" src="//i.kissmetrics.com/i.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" async="" src="https://cdn.heapanalytics.com/js/heap-820114400.js"&gt;&lt;/script&gt;&lt;script async="" src="//www.google-analytics.com/analytics.js"&gt;&lt;/script&gt;&lt;script&gt;
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-23474761-3', 'plivo.com');
+            ga('send', 'pageview');
+        &lt;/script&gt;
+        &lt;!-- GA universal tracking ends--&gt;
+
+        &lt;!-- Kissmetrics --&gt;
+        &lt;script type="text/javascript"&gt;var _kmq = _kmq || [];
+            var _kmk = _kmk || 'd120fc047f6354d46e364788e2aea1ed87fd794b';
+            function _kms(u){
+                setTimeout(function(){
+                        var d = document, f = d.getElementsByTagName('script')[0],
+                        s = d.createElement('script');
+                        s.type = 'text/javascript'; s.async = true; s.src = u;
+                        f.parentNode.insertBefore(s, f);
+                        }, 1);
+            }
+            _kms('//i.kissmetrics.com/i.js');
+            _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+        &lt;/script&gt;
+        &lt;!-- Kissmetrics end --&gt;
+        &lt;!-- Heap analytics --&gt;
+        &lt;script type="text/javascript"&gt;
+          window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c&amp;lt;p.length;c++)heap[p[c]]=o(p[c])};
+          heap.load("820114400");
+        &lt;/script&gt;
+        &lt;!-- Heap end --&gt;
+        &lt;!-- Sift science tracking page view--&gt;
+        &lt;script src="https://cdn.siftscience.com/s.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript"&gt;
+            var siftKey = "0108d49a9d";
+            _sift.push(['_setAccount', siftKey]);
+            _sift.push(['_trackPageview']);
+        &lt;/script&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+	&lt;div id="wrapper"&gt;
+        &lt;div class="navbar navbar-default"&gt;
+            &lt;div class="container row-fluid"&gt;
+                
+                &lt;div class="span5"&gt;
+                    &lt;div class="span3"&gt;
+                        &lt;div class="logo"&gt;
+                            &lt;a href="/dashboard/"&gt;&lt;img style="max-width:110%;width: 132px;height: 40px;" src="https://plivostatic.s3.amazonaws.com/images/logo.png" alt="" /&gt;&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="span7 fr"&gt;
+                    &lt;ul class="loginnav"&gt;
+                        &lt;li&gt;
+                            &lt;span&gt;(plivoiview@gmail.com)&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            
+                            &lt;a href="/dashboard/" class="myacc   "&gt;API Platform&lt;/a&gt; &lt;/li&gt;
+                                    &lt;li&gt; | &lt;/li&gt;
+                                    
+                                    &lt;li&gt; &lt;a href="/subaccount/" class="myacc uln"&gt;Account&lt;/a&gt; &lt;/li&gt;
+                            
+                        
+                        
+                            &lt;li&gt; | &lt;/li&gt;
+                        
+                        &lt;li&gt;
+                            &lt;a href="/accounts/logout/"&gt;Log Out&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;!--&lt;nav class="nav-user"&gt;--&gt;
+                        &lt;!--&lt;a href="/accounts/logout/" &gt;Log Out&lt;/a&gt;--&gt;
+                    &lt;!--&lt;/nav&gt;--&gt;
+                    &lt;!--&lt;nav class="nav-util"&gt;--&gt;
+                        &lt;!--&lt;a href="https://plivo.com/contact/sales"  target="_blank"&gt;Contact Sales&lt;/a&gt;--&gt;
+                        &lt;!--&lt;a href="https://plivo.com/contact/support"  target="_blank"&gt;Contact Support&lt;/a&gt;--&gt;
+                    &lt;!--&lt;/nav&gt;--&gt;
+                    &lt;!--&lt;nav class="nav-secondary"&gt;--&gt;
+                        &lt;!--&lt;span&gt;(plivoiview@gmail.com)&lt;/span&gt;--&gt;
+                        &lt;!----&gt;
+                            &lt;!--&lt;a href="/dashboard/" class="myacc"&gt;Dashboard&lt;/a&gt;--&gt;
+                        &lt;!----&gt;
+                    &lt;!--&lt;/nav&gt;--&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        
+&lt;div id="container"&gt;
+ &lt;div class="shadow shadow-bot"&gt;
+    &lt;div id="dashnav"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/subaccount/"&gt;Sub Accounts&lt;/a&gt;&lt;/li&gt;
+        
+        &lt;li&gt;&lt;a href="/profiles/edit/"&gt;Account Profile&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/accounts/password/change/"&gt;Change Password&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/accounts/auth-token/generate/"&gt;Change Auth Token&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/accounts/verification/" title="Account Verification"&gt;Verification&lt;/a&gt;&lt;/li&gt;
+
+        
+        &lt;li class="active"&gt;&lt;a href="/payments/recharge/" title="Payments"&gt;Payments&lt;/a&gt;&lt;/li&gt;
+        
+
+        &lt;li class="no-right-border"&gt;&lt;a href="/push-credentials/list/" title="Push Credentials" class="last"&gt;Push Credentials&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+
+&lt;div class="container"&gt;
+    &lt;div class="in-nav"&gt;
+        &lt;ul&gt;
+		  
+            &lt;li class="active"&gt;
+          
+		  &lt;a href="/payments/recharge/"&gt;Recharge&lt;/a&gt;
+          
+          &lt;/li&gt;
+		  &lt;li&gt;&lt;a href="/payments/invoice/"&gt;Usage&lt;/a&gt;&lt;/li&gt;
+		  &lt;li&gt;&lt;a href="/payments/history/"&gt;History&lt;/a&gt;&lt;/li&gt;
+		  &lt;li&gt;&lt;a href="/payments/recurring/"&gt;Recurring Charges&lt;/a&gt;&lt;/li&gt;
+		   
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="container payments-new"&gt;
+    
+        &lt;h2 class="no-card-message"&gt;Add a card&lt;/h2&gt;
+        
+        &lt;h5&gt;You do not have any saved cards. Add a credit card to recharge or enable auto recharge. &lt;/h5&gt;
+        
+        &lt;div&gt;&lt;a href="#add-credit-card-modal" class="btn btn-success no-card-add-card" data-toggle="modal"&gt;Add Credit Card&lt;/a&gt;&lt;/div&gt;
+	&lt;div class="redeem-no-card"&gt;&lt;a href="javascript:void(0);" onclick="show_modal()"&gt;Redeem a coupon code instead&lt;/a&gt;&lt;/div&gt;
+    
+&lt;/div&gt;
+
+&lt;div class="modal hide fade in" id="myModal" aria-hidden="false" style="display: block;"&gt;
+    &lt;div class="modal-header"&gt;
+        &lt;a class="close" data-dismiss="modal"&gt;×&lt;/a&gt;
+        &lt;h3&gt;Redeem your coupon&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body" id="modbody"&gt;
+        &lt;div class="alert alert-error" id="coupon_error" style="display: block;"&gt;This coupon code is invalid.&lt;/div&gt;
+        &lt;input id="coupon" class="large" type="text" maxlength="20" placeholder="Coupon Code" /&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer" id="modfooter"&gt;
+        &lt;a onclick="activate_coupon()" class="btn"&gt;Submit&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer" id="modfooter-success" style="display: none;"&gt;
+        &lt;a onclick="$('#myModal').modal('toggle')" class="btn"&gt;Close&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="modal hide fade" id="delete-confirmation"&gt;
+    &lt;div class="modal-header"&gt;
+        &lt;a class="close" data-dismiss="modal"&gt;×&lt;/a&gt;
+        &lt;h3&gt;Delete Card&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+        &lt;h5&gt;Are you sure you want to delete this card?&lt;/h5&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+        &lt;button type="reset" class="btn" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
+        &lt;button type="submit" class="btn btn-danger" id="delete-confirmed"&gt;Delete&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="modal hide fade" id="modal-card-verification"&gt;
+    &lt;div class="modal-header"&gt;
+        &lt;a class="close" data-dismiss="modal"&gt;×&lt;/a&gt;
+        &lt;h3&gt;Verify Credit Card&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body text-center"&gt;
+      &lt;div class="alert alert-danger hide"&gt;&lt;/div&gt;
+      &lt;p class="text-left m-t-10"&gt;Enter the amount charged (in USD) or the &lt;a href="https://support.plivo.com/support/solutions/articles/17000044489-my-card-statement-shows-amounts-in-local-currency-is-there-any-way-for-me-to-verify-my-card-" target="_blank"&gt;code&lt;/a&gt; from your card statement:&lt;/p&gt;
+      &lt;div class="row m-t-40"&gt;
+        &lt;div class="span4"&gt;&lt;strong&gt;Card Ending in:&lt;/strong&gt;&lt;span class="modal-last-four-digit"&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="span4 pull-right text-left"&gt;&lt;strong&gt;Charge Date:&lt;/strong&gt; &lt;span class="modal-charge-date"&gt;&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="m-t-40"&gt;
+        &lt;input type="text" id="card-code" placeholder="Amount (USD) / Code" class="p-10" /&gt;
+        &lt;div class="field-validation code-validation hide"&gt;Please enter amount or code.&lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+       &lt;a href="https://support.plivo.com/support/solutions/folders/17000123712" target="_blank" class="pull-left m-t-10"&gt;Know more about card verification&lt;/a&gt;
+        &lt;button class="btn" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
+        &lt;button class="btn btn-success" id="btn-card-verify"&gt;Verify Card&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="add-credit-card-modal" class="modal hide fade" tabindex="-1"&gt;
+    &lt;div class="modal-dialog"&gt;
+        &lt;form id="add-credit-card" class="modal-content"&gt;
+            &lt;div style="display:none"&gt;&lt;input type="hidden" name="csrfmiddlewaretoken" value="59a77530f6bbdddaab09197c99413953" /&gt;&lt;/div&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;a class="close" data-dismiss="modal"&gt;×&lt;/a&gt;
+                &lt;h3&gt;Add Credit Card&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+              
+                &lt;div class="card-number"&gt;
+                    &lt;label for="add-credit-card-card-num"&gt;Credit Card Number&lt;/label&gt;
+                    &lt;input type="text" name="card-number" id="add-credit-card-card-num" /&gt;
+                &lt;/div&gt;
+
+                &lt;div class="expiry"&gt;
+                    &lt;label for="add-credit-card-exp"&gt;Expires&lt;/label&gt;
+                    &lt;input type="text" name="expiration" id="add-credit-card-exp" placeholder="MM/YY" /&gt;
+                &lt;/div&gt;
+
+                &lt;div class="cvv"&gt;
+                    &lt;label for="add-credit-card-cvv"&gt;CVV&lt;/label&gt;
+                    &lt;input type="text" name="cvv" id="add-credit-card-cvv" placeholder="CVV" /&gt;
+                &lt;/div&gt;
+
+                &lt;div class="holder-name"&gt;
+                    &lt;label for="add-credit-card-name"&gt;Card Holder Name &lt;small&gt;(as shown on card)&lt;/small&gt;&lt;/label&gt;
+                    &lt;input type="text" name="name" id="add-credit-card-name" /&gt;
+                &lt;/div&gt;
+
+                &lt;div class="address"&gt;
+                    &lt;label for="add-credit-card-addr"&gt;Street Address&lt;/label&gt;
+                    &lt;input type="text" name="address" id="add-credit-card-addr" /&gt;
+                &lt;/div&gt;
+
+                &lt;div class="card-country"&gt;
+                    &lt;label for="add-credit-card-country"&gt;Country&lt;/label&gt;
+                    &lt;select name="country" id="add-credit-card-country" class="select-country" data-placeholder="Country"&gt;
+                        
+                            &lt;option value="AF"&gt;AFGHANISTAN&lt;/option&gt;
+                        
+                            &lt;option value="AX"&gt;ALAND ISLANDS&lt;/option&gt;
+                        
+                            &lt;option value="AL"&gt;ALBANIA&lt;/option&gt;
+                        
+                            &lt;option value="DZ"&gt;ALGERIA&lt;/option&gt;
+                        
+                            &lt;option value="AS"&gt;AMERICAN SAMOA&lt;/option&gt;
+                        
+                            &lt;option value="AD"&gt;ANDORRA&lt;/option&gt;
+                        
+                            &lt;option value="AO"&gt;ANGOLA&lt;/option&gt;
+                        
+                            &lt;option value="AI"&gt;ANGUILLA&lt;/option&gt;
+                        
+                            &lt;option value="AQ"&gt;ANTARCTICA&lt;/option&gt;
+                        
+                            &lt;option value="AG"&gt;ANTIGUA AND BARBUDA&lt;/option&gt;
+                        
+                            &lt;option value="AR"&gt;ARGENTINA&lt;/option&gt;
+                        
+                            &lt;option value="AM"&gt;ARMENIA&lt;/option&gt;
+                        
+                            &lt;option value="AW"&gt;ARUBA&lt;/option&gt;
+                        
+                            &lt;option value="AU"&gt;AUSTRALIA&lt;/option&gt;
+                        
+                            &lt;option value="AT"&gt;AUSTRIA&lt;/option&gt;
+                        
+                            &lt;option value="AZ"&gt;AZERBAIJAN&lt;/option&gt;
+                        
+                            &lt;option value="BS"&gt;BAHAMAS&lt;/option&gt;
+                        
+                            &lt;option value="BH"&gt;BAHRAIN&lt;/option&gt;
+                        
+                            &lt;option value="BD"&gt;BANGLADESH&lt;/option&gt;
+                        
+                            &lt;option value="BB"&gt;BARBADOS&lt;/option&gt;
+                        
+                            &lt;option value="BY"&gt;BELARUS&lt;/option&gt;
+                        
+                            &lt;option value="BE"&gt;BELGIUM&lt;/option&gt;
+                        
+                            &lt;option value="BZ"&gt;BELIZE&lt;/option&gt;
+                        
+                            &lt;option value="BJ"&gt;BENIN&lt;/option&gt;
+                        
+                            &lt;option value="BM"&gt;BERMUDA&lt;/option&gt;
+                        
+                            &lt;option value="BT"&gt;BHUTAN&lt;/option&gt;
+                        
+                            &lt;option value="BO"&gt;BOLIVIA&lt;/option&gt;
+                        
+                            &lt;option value="BA"&gt;BOSNIA AND HERZEGOVINA&lt;/option&gt;
+                        
+                            &lt;option value="BW"&gt;BOTSWANA&lt;/option&gt;
+                        
+                            &lt;option value="BV"&gt;BOUVET ISLAND&lt;/option&gt;
+                        
+                            &lt;option value="BR"&gt;BRAZIL&lt;/option&gt;
+                        
+                            &lt;option value="IO"&gt;BRITISH INDIAN OCEAN TERRITORY&lt;/option&gt;
+                        
+                            &lt;option value="BN"&gt;BRUNEI&lt;/option&gt;
+                        
+                            &lt;option value="BG"&gt;BULGARIA&lt;/option&gt;
+                        
+                            &lt;option value="BF"&gt;BURKINA FASO&lt;/option&gt;
+                        
+                            &lt;option value="BI"&gt;BURUNDI&lt;/option&gt;
+                        
+                            &lt;option value="KH"&gt;CAMBODIA&lt;/option&gt;
+                        
+                            &lt;option value="CM"&gt;CAMEROON&lt;/option&gt;
+                        
+                            &lt;option value="CA"&gt;CANADA&lt;/option&gt;
+                        
+                            &lt;option value="CV"&gt;CAPE VERDE&lt;/option&gt;
+                        
+                            &lt;option value="KY"&gt;CAYMAN ISLANDS&lt;/option&gt;
+                        
+                            &lt;option value="CF"&gt;CENTRAL AFRICAN REPUBLIC&lt;/option&gt;
+                        
+                            &lt;option value="TD"&gt;CHAD&lt;/option&gt;
+                        
+                            &lt;option value="CL"&gt;CHILE&lt;/option&gt;
+                        
+                            &lt;option value="CN"&gt;CHINA&lt;/option&gt;
+                        
+                            &lt;option value="CX"&gt;CHRISTMAS ISLAND&lt;/option&gt;
+                        
+                            &lt;option value="CC"&gt;COCOS (KEELING) ISLANDS&lt;/option&gt;
+                        
+                            &lt;option value="CO"&gt;COLOMBIA&lt;/option&gt;
+                        
+                            &lt;option value="KM"&gt;COMOROS&lt;/option&gt;
+                        
+                            &lt;option value="CG"&gt;CONGO&lt;/option&gt;
+                        
+                            &lt;option value="CD"&gt;CONGO, THE DEMOCRATIC REPUBLIC OF THE&lt;/option&gt;
+                        
+                            &lt;option value="CK"&gt;COOK ISLANDS&lt;/option&gt;
+                        
+                            &lt;option value="CR"&gt;COSTA RICA&lt;/option&gt;
+                        
+                            &lt;option value="CI"&gt;COTE D'IVOIRE&lt;/option&gt;
+                        
+                            &lt;option value="HR"&gt;CROATIA&lt;/option&gt;
+                        
+                            &lt;option value="CU"&gt;CUBA&lt;/option&gt;
+                        
+                            &lt;option value="CY"&gt;CYPRUS&lt;/option&gt;
+                        
+                            &lt;option value="CZ"&gt;CZECH REPUBLIC&lt;/option&gt;
+                        
+                            &lt;option value="DK"&gt;DENMARK&lt;/option&gt;
+                        
+                            &lt;option value="DJ"&gt;DJIBOUTI&lt;/option&gt;
+                        
+                            &lt;option value="DM"&gt;DOMINICA&lt;/option&gt;
+                        
+                            &lt;option value="DO"&gt;DOMINICAN REPUBLIC&lt;/option&gt;
+                        
+                            &lt;option value="EC"&gt;ECUADOR&lt;/option&gt;
+                        
+                            &lt;option value="EG"&gt;EGYPT&lt;/option&gt;
+                        
+                            &lt;option value="SV"&gt;EL SALVADOR&lt;/option&gt;
+                        
+                            &lt;option value="GQ"&gt;EQUATORIAL GUINEA&lt;/option&gt;
+                        
+                            &lt;option value="ER"&gt;ERITREA&lt;/option&gt;
+                        
+                            &lt;option value="EE"&gt;ESTONIA&lt;/option&gt;
+                        
+                            &lt;option value="ET"&gt;ETHIOPIA&lt;/option&gt;
+                        
+                            &lt;option value="FK"&gt;FALKLAND ISLANDS (MALVINAS)&lt;/option&gt;
+                        
+                            &lt;option value="FO"&gt;FAROE ISLANDS&lt;/option&gt;
+                        
+                            &lt;option value="FJ"&gt;FIJI&lt;/option&gt;
+                        
+                            &lt;option value="FI"&gt;FINLAND&lt;/option&gt;
+                        
+                            &lt;option value="FR"&gt;FRANCE&lt;/option&gt;
+                        
+                            &lt;option value="GF"&gt;FRENCH GUIANA&lt;/option&gt;
+                        
+                            &lt;option value="PF"&gt;FRENCH POLYNESIA&lt;/option&gt;
+                        
+                            &lt;option value="TF"&gt;FRENCH SOUTHERN TERRITORIES&lt;/option&gt;
+                        
+                            &lt;option value="GA"&gt;GABON&lt;/option&gt;
+                        
+                            &lt;option value="GM"&gt;GAMBIA&lt;/option&gt;
+                        
+                            &lt;option value="GE"&gt;GEORGIA&lt;/option&gt;
+                        
+                            &lt;option value="DE"&gt;GERMANY&lt;/option&gt;
+                        
+                            &lt;option value="GH"&gt;GHANA&lt;/option&gt;
+                        
+                            &lt;option value="GI"&gt;GIBRALTAR&lt;/option&gt;
+                        
+                            &lt;option value="GR"&gt;GREECE&lt;/option&gt;
+                        
+                            &lt;option value="GL"&gt;GREENLAND&lt;/option&gt;
+                        
+                            &lt;option value="GD"&gt;GRENADA&lt;/option&gt;
+                        
+                            &lt;option value="GP"&gt;GUADELOUPE&lt;/option&gt;
+                        
+                            &lt;option value="GU"&gt;GUAM&lt;/option&gt;
+                        
+                            &lt;option value="GT"&gt;GUATEMALA&lt;/option&gt;
+                        
+                            &lt;option value="GG"&gt;GUERNSEY&lt;/option&gt;
+                        
+                            &lt;option value="GN"&gt;GUINEA&lt;/option&gt;
+                        
+                            &lt;option value="GW"&gt;GUINEA-BISSAU&lt;/option&gt;
+                        
+                            &lt;option value="GY"&gt;GUYANA&lt;/option&gt;
+                        
+                            &lt;option value="HT"&gt;HAITI&lt;/option&gt;
+                        
+                            &lt;option value="HM"&gt;HEARD ISLAND AND MCDONALD ISLANDS&lt;/option&gt;
+                        
+                            &lt;option value="VA"&gt;HOLY SEE (VATICAN CITY STATE)&lt;/option&gt;
+                        
+                            &lt;option value="HN"&gt;HONDURAS&lt;/option&gt;
+                        
+                            &lt;option value="HK"&gt;HONG KONG&lt;/option&gt;
+                        
+                            &lt;option value="HU"&gt;HUNGARY&lt;/option&gt;
+                        
+                            &lt;option value="IS"&gt;ICELAND&lt;/option&gt;
+                        
+                            &lt;option value="IN" selected=""&gt;INDIA&lt;/option&gt;
+                        
+                            &lt;option value="ID"&gt;INDONESIA&lt;/option&gt;
+                        
+                            &lt;option value="IR"&gt;IRAN, ISLAMIC REPUBLIC OF&lt;/option&gt;
+                        
+                            &lt;option value="IQ"&gt;IRAQ&lt;/option&gt;
+                        
+                            &lt;option value="IE"&gt;IRELAND&lt;/option&gt;
+                        
+                            &lt;option value="IM"&gt;ISLE OF MAN&lt;/option&gt;
+                        
+                            &lt;option value="IL"&gt;ISRAEL&lt;/option&gt;
+                        
+                            &lt;option value="IT"&gt;ITALY&lt;/option&gt;
+                        
+                            &lt;option value="JM"&gt;JAMAICA&lt;/option&gt;
+                        
+                            &lt;option value="JP"&gt;JAPAN&lt;/option&gt;
+                        
+                            &lt;option value="JE"&gt;JERSEY&lt;/option&gt;
+                        
+                            &lt;option value="JO"&gt;JORDAN&lt;/option&gt;
+                        
+                            &lt;option value="KZ"&gt;KAZAKHSTAN&lt;/option&gt;
+                        
+                            &lt;option value="KE"&gt;KENYA&lt;/option&gt;
+                        
+                            &lt;option value="KI"&gt;KIRIBATI&lt;/option&gt;
+                        
+                            &lt;option value="KW"&gt;KUWAIT&lt;/option&gt;
+                        
+                            &lt;option value="KG"&gt;KYRGYZSTAN&lt;/option&gt;
+                        
+                            &lt;option value="LA"&gt;LAO PEOPLE'S DEMOCRATIC REPUBLIC&lt;/option&gt;
+                        
+                            &lt;option value="LV"&gt;LATVIA&lt;/option&gt;
+                        
+                            &lt;option value="LB"&gt;LEBANON&lt;/option&gt;
+                        
+                            &lt;option value="LS"&gt;LESOTHO&lt;/option&gt;
+                        
+                            &lt;option value="LR"&gt;LIBERIA&lt;/option&gt;
+                        
+                            &lt;option value="LY"&gt;LIBYAN ARAB JAMAHIRIYA&lt;/option&gt;
+                        
+                            &lt;option value="LI"&gt;LIECHTENSTEIN&lt;/option&gt;
+                        
+                            &lt;option value="LT"&gt;LITHUANIA&lt;/option&gt;
+                        
+                            &lt;option value="LU"&gt;LUXEMBOURG&lt;/option&gt;
+                        
+                            &lt;option value="MO"&gt;MACAO&lt;/option&gt;
+                        
+                            &lt;option value="MK"&gt;MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF&lt;/option&gt;
+                        
+                            &lt;option value="MG"&gt;MADAGASCAR&lt;/option&gt;
+                        
+                            &lt;option value="MW"&gt;MALAWI&lt;/option&gt;
+                        
+                            &lt;option value="MY"&gt;MALAYSIA&lt;/option&gt;
+                        
+                            &lt;option value="MV"&gt;MALDIVES&lt;/option&gt;
+                        
+                            &lt;option value="ML"&gt;MALI&lt;/option&gt;
+                        
+                            &lt;option value="MT"&gt;MALTA&lt;/option&gt;
+                        
+                            &lt;option value="MH"&gt;MARSHALL ISLANDS&lt;/option&gt;
+                        
+                            &lt;option value="MQ"&gt;MARTINIQUE&lt;/option&gt;
+                        
+                            &lt;option value="MR"&gt;MAURITANIA&lt;/option&gt;
+                        
+                            &lt;option value="MU"&gt;MAURITIUS&lt;/option&gt;
+                        
+                            &lt;option value="YT"&gt;MAYOTTE&lt;/option&gt;
+                        
+                            &lt;option value="MX"&gt;MEXICO&lt;/option&gt;
+                        
+                            &lt;option value="FM"&gt;MICRONESIA, FEDERATED STATES OF&lt;/option&gt;
+                        
+                            &lt;option value="MD"&gt;MOLDOVA, REPUBLIC OF&lt;/option&gt;
+                        
+                            &lt;option value="MC"&gt;MONACO&lt;/option&gt;
+                        
+                            &lt;option value="MN"&gt;MONGOLIA&lt;/option&gt;
+                        
+                            &lt;option value="ME"&gt;MONTENEGRO&lt;/option&gt;
+                        
+                            &lt;option value="MS"&gt;MONTSERRAT&lt;/option&gt;
+                        
+                            &lt;option value="MA"&gt;MOROCCO&lt;/option&gt;
+                        
+                            &lt;option value="MZ"&gt;MOZAMBIQUE&lt;/option&gt;
+                        
+                            &lt;option value="MM"&gt;MYANMAR&lt;/option&gt;
+                        
+                            &lt;option value="NA"&gt;NAMIBIA&lt;/option&gt;
+                        
+                            &lt;option value="NR"&gt;NAURU&lt;/option&gt;
+                        
+                            &lt;option value="NP"&gt;NEPAL&lt;/option&gt;
+                        
+                            &lt;option value="NL"&gt;NETHERLANDS&lt;/option&gt;
+                        
+                            &lt;option value="AN"&gt;NETHERLANDS ANTILLES&lt;/option&gt;
+                        
+                            &lt;option value="NC"&gt;NEW CALEDONIA&lt;/option&gt;
+                        
+                            &lt;option value="NZ"&gt;NEW ZEALAND&lt;/option&gt;
+                        
+                            &lt;option value="NI"&gt;NICARAGUA&lt;/option&gt;
+                        
+                            &lt;option value="NE"&gt;NIGER&lt;/option&gt;
+                        
+                            &lt;option value="NG"&gt;NIGERIA&lt;/option&gt;
+                        
+                            &lt;option value="NU"&gt;NIUE&lt;/option&gt;
+                        
+                            &lt;option value="NF"&gt;NORFOLK ISLAND&lt;/option&gt;
+                        
+                            &lt;option value="MP"&gt;NORTHERN MARIANA ISLANDS&lt;/option&gt;
+                        
+                            &lt;option value="KP"&gt;NORTH KOREA&lt;/option&gt;
+                        
+                            &lt;option value="NO"&gt;NORWAY&lt;/option&gt;
+                        
+                            &lt;option value="OM"&gt;OMAN&lt;/option&gt;
+                        
+                            &lt;option value="PK"&gt;PAKISTAN&lt;/option&gt;
+                        
+                            &lt;option value="PW"&gt;PALAU&lt;/option&gt;
+                        
+                            &lt;option value="PS"&gt;PALESTINIAN AUTHORITY&lt;/option&gt;
+                        
+                            &lt;option value="PA"&gt;PANAMA&lt;/option&gt;
+                        
+                            &lt;option value="PG"&gt;PAPUA NEW GUINEA&lt;/option&gt;
+                        
+                            &lt;option value="PY"&gt;PARAGUAY&lt;/option&gt;
+                        
+                            &lt;option value="PE"&gt;PERU&lt;/option&gt;
+                        
+                            &lt;option value="PH"&gt;PHILIPPINES&lt;/option&gt;
+                        
+                            &lt;option value="PN"&gt;PITCAIRN&lt;/option&gt;
+                        
+                            &lt;option value="PL"&gt;POLAND&lt;/option&gt;
+                        
+                            &lt;option value="PT"&gt;PORTUGAL&lt;/option&gt;
+                        
+                            &lt;option value="PR"&gt;PUERTO RICO&lt;/option&gt;
+                        
+                            &lt;option value="QA"&gt;QATAR&lt;/option&gt;
+                        
+                            &lt;option value="RE"&gt;REUNION&lt;/option&gt;
+                        
+                            &lt;option value="RO"&gt;ROMANIA&lt;/option&gt;
+                        
+                            &lt;option value="RU"&gt;RUSSIA&lt;/option&gt;
+                        
+                            &lt;option value="RW"&gt;RWANDA&lt;/option&gt;
+                        
+                            &lt;option value="BL"&gt;SAINT BARTHELEMY&lt;/option&gt;
+                        
+                            &lt;option value="SH"&gt;SAINT HELENA&lt;/option&gt;
+                        
+                            &lt;option value="KN"&gt;SAINT KITTS AND NEVIS&lt;/option&gt;
+                        
+                            &lt;option value="LC"&gt;SAINT LUCIA&lt;/option&gt;
+                        
+                            &lt;option value="MF"&gt;SAINT MARTIN&lt;/option&gt;
+                        
+                            &lt;option value="PM"&gt;SAINT PIERRE AND MIQUELON&lt;/option&gt;
+                        
+                            &lt;option value="VC"&gt;SAINT VINCENT AND THE GRENADINES&lt;/option&gt;
+                        
+                            &lt;option value="WS"&gt;SAMOA&lt;/option&gt;
+                        
+                            &lt;option value="SM"&gt;SAN MARINO&lt;/option&gt;
+                        
+                            &lt;option value="ST"&gt;SAO TOME AND PRINCIPE&lt;/option&gt;
+                        
+                            &lt;option value="SA"&gt;SAUDI ARABIA&lt;/option&gt;
+                        
+                            &lt;option value="SN"&gt;SENEGAL&lt;/option&gt;
+                        
+                            &lt;option value="RS"&gt;SERBIA&lt;/option&gt;
+                        
+                            &lt;option value="SC"&gt;SEYCHELLES&lt;/option&gt;
+                        
+                            &lt;option value="SL"&gt;SIERRA LEONE&lt;/option&gt;
+                        
+                            &lt;option value="SG"&gt;SINGAPORE&lt;/option&gt;
+                        
+                            &lt;option value="SP"&gt;SKYPE&lt;/option&gt;
+                        
+                            &lt;option value="SK"&gt;SLOVAKIA&lt;/option&gt;
+                        
+                            &lt;option value="SI"&gt;SLOVENIA&lt;/option&gt;
+                        
+                            &lt;option value="SB"&gt;SOLOMON ISLANDS&lt;/option&gt;
+                        
+                            &lt;option value="SO"&gt;SOMALIA&lt;/option&gt;
+                        
+                            &lt;option value="ZA"&gt;SOUTH AFRICA&lt;/option&gt;
+                        
+                            &lt;option value="GS"&gt;SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS&lt;/option&gt;
+                        
+                            &lt;option value="KR"&gt;SOUTH KOREA&lt;/option&gt;
+                        
+                            &lt;option value="SS"&gt;SOUTH SUDAN&lt;/option&gt;
+                        
+                            &lt;option value="ES"&gt;SPAIN&lt;/option&gt;
+                        
+                            &lt;option value="LK"&gt;SRI LANKA&lt;/option&gt;
+                        
+                            &lt;option value="SX"&gt;St. Maarten&lt;/option&gt;
+                        
+                            &lt;option value="SD"&gt;SUDAN&lt;/option&gt;
+                        
+                            &lt;option value="SR"&gt;SURINAME&lt;/option&gt;
+                        
+                            &lt;option value="SJ"&gt;SVALBARD AND JAN MAYEN&lt;/option&gt;
+                        
+                            &lt;option value="SZ"&gt;SWAZILAND&lt;/option&gt;
+                        
+                            &lt;option value="SE"&gt;SWEDEN&lt;/option&gt;
+                        
+                            &lt;option value="CH"&gt;SWITZERLAND&lt;/option&gt;
+                        
+                            &lt;option value="SY"&gt;SYRIAN ARAB REPUBLIC&lt;/option&gt;
+                        
+                            &lt;option value="TW"&gt;TAIWAN, PROVINCE OF CHINA&lt;/option&gt;
+                        
+                            &lt;option value="TJ"&gt;TAJIKISTAN&lt;/option&gt;
+                        
+                            &lt;option value="TZ"&gt;TANZANIA, UNITED REPUBLIC OF&lt;/option&gt;
+                        
+                            &lt;option value="TH"&gt;THAILAND&lt;/option&gt;
+                        
+                            &lt;option value="TL"&gt;TIMOR-LESTE&lt;/option&gt;
+                        
+                            &lt;option value="TG"&gt;TOGO&lt;/option&gt;
+                        
+                            &lt;option value="TK"&gt;TOKELAU&lt;/option&gt;
+                        
+                            &lt;option value="TO"&gt;TONGA&lt;/option&gt;
+                        
+                            &lt;option value="TT"&gt;TRINIDAD AND TOBAGO&lt;/option&gt;
+                        
+                            &lt;option value="TN"&gt;TUNISIA&lt;/option&gt;
+                        
+                            &lt;option value="TR"&gt;TURKEY&lt;/option&gt;
+                        
+                            &lt;option value="TM"&gt;TURKMENISTAN&lt;/option&gt;
+                        
+                            &lt;option value="TC"&gt;TURKS AND CAICOS ISLANDS&lt;/option&gt;
+                        
+                            &lt;option value="TV"&gt;TUVALU&lt;/option&gt;
+                        
+                            &lt;option value="UG"&gt;UGANDA&lt;/option&gt;
+                        
+                            &lt;option value="UA"&gt;UKRAINE&lt;/option&gt;
+                        
+                            &lt;option value="AE"&gt;UNITED ARAB EMIRATES&lt;/option&gt;
+                        
+                            &lt;option value="GB"&gt;UNITED KINGDOM&lt;/option&gt;
+                        
+                            &lt;option value="US"&gt;UNITED STATES&lt;/option&gt;
+                        
+                            &lt;option value="UM"&gt;UNITED STATES MINOR OUTLYING ISLANDS&lt;/option&gt;
+                        
+                            &lt;option value="UY"&gt;URUGUAY&lt;/option&gt;
+                        
+                            &lt;option value="UZ"&gt;UZBEKISTAN&lt;/option&gt;
+                        
+                            &lt;option value="VU"&gt;VANUATU&lt;/option&gt;
+                        
+                            &lt;option value="VE"&gt;VENEZUELA&lt;/option&gt;
+                        
+                            &lt;option value="VN"&gt;VIETNAM&lt;/option&gt;
+                        
+                            &lt;option value="VG"&gt;VIRGIN ISLANDS, BRITISH&lt;/option&gt;
+                        
+                            &lt;option value="VI"&gt;VIRGIN ISLANDS, U.S.&lt;/option&gt;
+                        
+                            &lt;option value="WF"&gt;WALLIS AND FUTUNA&lt;/option&gt;
+                        
+                            &lt;option value="EH"&gt;WESTERN SAHARA&lt;/option&gt;
+                        
+                            &lt;option value="YE"&gt;YEMEN&lt;/option&gt;
+                        
+                            &lt;option value="ZM"&gt;ZAMBIA&lt;/option&gt;
+                        
+                            &lt;option value="ZW"&gt;ZIMBABWE&lt;/option&gt;
+                        
+                    &lt;/select&gt;
+                &lt;/div&gt;
+
+                &lt;div class="card-zip-code"&gt;
+                    &lt;label for="add-credit-card-zip"&gt;Zip / Postal Code&lt;/label&gt;
+                    &lt;input type="text" name="zip-postal-code" id="add-credit-card-zip" /&gt;
+                &lt;/div&gt;
+                &lt;div class="alert alert-error card-errors"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;footer class="modal-footer" id="form-footer"&gt;
+	      &lt;div class="accepted_cards"&gt;
+		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_american express.png" /&gt;
+		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_diners club.png" /&gt;
+		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_discover.png" /&gt;
+		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_jcb.png" /&gt;
+		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_mastercard.png" /&gt;
+		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_visa.png" /&gt;
+	      &lt;/div&gt;
+                &lt;button type="reset" class="btn" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
+                &lt;button type="submit" class="btn btn-success"&gt;Add&lt;/button&gt;
+            &lt;/footer&gt;
+            &lt;footer class="modal-footer" id="loader-footer"&gt;
+              &lt;img src="/static_media/images/ajax-loader.gif" /&gt;
+            &lt;/footer&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+        &lt;div class="container-fluid" id="footer"&gt;
+            &lt;div class="footer"&gt;
+	      &lt;div class="span6 text-left pull-left" style="padding-top:7px;"&gt;
+		  © 2018 Plivo, Inc.   ·  
+		  &lt;a href="https://www.plivo.com/about/" target="_blank"&gt;About&lt;/a&gt;   ·  
+		  &lt;a href="https://status.plivo.com/" target="_blank"&gt;Service Status&lt;/a&gt;  ·  
+		  &lt;a href="https://www.plivo.com/blog/" target="_blank"&gt;Blog&lt;/a&gt;
+	      &lt;/div&gt;
+	      &lt;div class="span1 text-center"&gt;&lt;/div&gt;
+	      &lt;div class="span5 text-right pull-right" style="padding-top:7px;"&gt;
+		  &lt;a href="/pricing/" target="_blank"&gt;Pricing&lt;/a&gt;   ·  
+		  &lt;a href="https://www.plivo.com/faq/" target="_blank"&gt;FAQs&lt;/a&gt;   ·  
+		  &lt;a href="https://www.plivo.com/contact/support/" target="_blank"&gt;Support&lt;/a&gt;
+	      &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        
+ &lt;script src="https://plivostatic.s3.amazonaws.com/js/jquery-1.7.2.js"&gt;&lt;/script&gt;
+
+
+        &lt;script src="https://plivostatic.s3.amazonaws.com/js/retina.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://plivostatic.s3.amazonaws.com/js/bootstrap.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://plivostatic.s3.amazonaws.com/js/bootstrap-tooltip.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript"&gt;
+            $(document).ready(function(){
+                $('i[title]').each(function(){
+                    $(this).popover({ trigger: "manual" , html: true, animation: false})
+                    .on("mouseenter", function () {
+                        var _this = this;
+                        $(this).popover("show");
+                        $(".popover").on("mouseleave", function () {
+                            $(_this).popover('hide');
+                        });
+                    }).on("mouseleave", function () {
+                        var _this = this;
+                        setTimeout(function () {
+                            if (!$(".popover:hover").length) {
+                                $(_this).popover("hide");
+                            }
+                        }, 100);
+                    });
+                });
+            });
+        &lt;/script&gt;
+
+        
+
+
+&lt;script type="text/javascript" src="https://js.stripe.com/v1/"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+    var set_default_running = false;
+    var auto_recharge = 'False';
+    var csrf_token = $("[name='csrfmiddlewaretoken']").val();
+    Stripe.setPublishableKey('pk_w6lP0ZXbE2blChXS64BRSSkNL2NGs');
+    $(document).ready(function(){
+        $("#id_auto_recharge").click(function(){
+            var _self = this;
+            if(_self.checked) {
+                $(".balance-note").show();
+            } else {
+                $(".balance-note").hide();
+                if (auto_recharge=='True') {
+                    save_auto_recharge();
+                }
+            }
+        });
+
+        $("#add-credit-card").submit(function() {
+              hide_error();
+              var credit_card_number = get_number($("#add-credit-card-card-num").val());
+              if (!$("#add-credit-card-card-num").val()){
+                    show_error("&amp;lt;p&amp;gt;Please enter the card number.&amp;lt;/p&amp;gt;");
+                    return false
+              } else if (!credit_card_number) {
+		    show_error("&amp;lt;p&amp;gt;Invalid card number.&amp;lt;/p&amp;gt;");
+                    return false
+	      }
+              if (!$("#add-credit-card-exp").val()){
+                    show_error("&amp;lt;p&amp;gt;Please enter the expiry date.&amp;lt;/p&amp;gt;");
+                    return false
+              }
+              var expiry_date = get_number($("#add-credit-card-exp").val().replace("/",""));
+              if(expiry_date.length!=4) {
+                    show_error("&amp;lt;p&amp;gt;The expiry date is not valid.&amp;lt;/p&amp;gt;");
+                    return false
+              }
+              var expiry_month = expiry_date.substring(0,2);
+              var expiry_year = expiry_date.substring(2,4);
+              var cvv = get_number($("#add-credit-card-cvv").val());
+              if (!$("#add-credit-card-cvv").val()) {
+                    show_error("&amp;lt;p&amp;gt;Please enter the CVV.&amp;lt;/p&amp;gt;");
+                    return false
+              } else if (!cvv) {
+		    show_error("&amp;lt;p&amp;gt;Invalid CVV.&amp;lt;/p&amp;gt;");
+                    return false
+	      }
+              if (!$("#add-credit-card-name").val()){
+                    show_error("&amp;lt;p&amp;gt;Please enter the name on the card.&amp;lt;/p&amp;gt;");
+                    return false
+              }
+              if (!$("#add-credit-card-addr").val()){
+                    show_error("&amp;lt;p&amp;gt;Please enter your address.&amp;lt;/p&amp;gt;");
+                    return false
+              }
+              var zip_code = $("#add-credit-card-zip").val();
+              if (!$("#add-credit-card-zip").val()){
+                    show_error("&amp;lt;p&amp;gt;Please enter your zip code.&amp;lt;/p&amp;gt;");
+                    return false
+              } else if (!zip_code) {
+		    show_error("&amp;lt;p&amp;gt;Invalid zip code.&amp;lt;/p&amp;gt;");
+                    return false
+	      }
+              bin_number = $("#add-credit-card-card-num").val().substring(0,6);
+              var card = {
+                number:    credit_card_number,
+                exp_month: expiry_month,
+                exp_year:  expiry_year,
+                cvc:       $("#add-credit-card-cvv").val(),
+                name:      $("#add-credit-card-name").val(),
+                address_line1:   $("#add-credit-card-addr").val(),
+                address_country: $("#add-credit-card-country").val(),
+                address_zip:     zip_code,
+              };
+              show_card_loader();
+              Stripe.createToken(card, function(status, response) {
+                if (status === 200) {
+                  response['bin_number'] = bin_number;
+                  response['csrfmiddlewaretoken'] = csrf_token;
+                  $.ajax({
+                    type: 'POST',
+                    url: '/payments/card/create/',
+                    contentType: 'application/json',
+                    data: response,
+                    success: function(resp) {
+                      
+                        window.location = "/payments/recharge";
+                    },
+                    error: function(resp) {
+                        resp = JSON.parse(resp.responseText);
+                        hide_card_loader();
+                        show_error("&amp;lt;p&amp;gt;"+resp.message+"&amp;lt;/p&amp;gt;");
+                    }
+                  });
+                } else {
+                  hide_card_loader();
+                  show_error("&amp;lt;p&amp;gt;"+response.error.message+"&amp;lt;/p&amp;gt;");
+                }
+              });
+            return false;
+        });
+    });
+
+    function show_modal() {
+        $('#modfooter-success').hide();
+        $('#modfooter').show();
+        $('#myModal').modal('show');
+    }
+
+    function get_number(number_string) {
+        if(!number_string)
+            return undefined;
+        var response = "";
+        try {
+            $.each(number_string.match(/\d+/g), function(index, number){response+=number});
+        } catch(err) { }
+        return response;
+    }
+
+    function activate_coupon() {
+        remove_coupon_message();
+        coupon_code = $('#coupon').val()
+        var data = {}
+        data.coupon_code = coupon_code
+        $.getJSON("/accounts/coupon/", data, function(response){
+            if (response.success) {
+                show_coupon_message("success","Coupon has been applied successfully. Your credits have been updated.");
+              
+            } else {
+                show_coupon_message("error", response.error);
+            }
+        });
+    }
+
+    $("#myModal").on('hidden', function(){
+        $("#coupon").val("");
+        remove_coupon_message();
+    });
+
+    function show_coupon_message(level, message) {
+        $("#coupon_error").html(message);
+        $("#coupon_error").addClass("alert-"+level);
+        $("#coupon_error").show();
+    }
+
+    function remove_coupon_message() {
+        $("#coupon_error").hide();
+        $("#coupon_error").html("");
+        $("#coupon_error").removeClass("alert-success").removeClass("alert-error");
+    }
+
+    function show_card_loader() {
+        $("#form-footer").hide();
+        $("#loader-footer").show();
+    }
+
+    function hide_card_loader() {
+        $("#loader-footer").hide();
+        $("#form-footer").show();
+    }
+
+    function show_error(message) {
+        $(".card-errors").html(message);
+        $(".card-errors").css('display','inline-block');
+    }
+
+    function hide_error() {
+        $(".card-errors").html("");
+        $(".card-errors").hide();
+    }
+
+    var message_timeout;
+    function show_payment_message(message, level) {
+        if(message_timeout) {
+            clearTimeout(message_timeout);
+            clear_payment_message();
+        }
+        $(".payment-message").html(message);
+        $(".payment-message").addClass("alert-"+level);
+        $(".payment-message").show();
+        message_timeout = setTimeout(clear_payment_message,30000);
+    }
+
+    function clear_payment_message() {
+        $(".payment-message").hide();
+        $(".payment-message").removeClass("alert-success").removeClass("alert-error");
+        $(".payment-message").html("");
+        message_timeout = null;
+    }
+
+    function make_default(card_id) {
+        // If the link was clicked on the default card, do nothing.
+        // We cannot remove the link because if someother card is made default
+        // this card will need the link.
+        if($("#"+card_id+" .label").attr("class").indexOf("primary")!=-1) {
+            return;
+        }
+
+        if (set_default_running)
+            return;
+        set_default_running = true;
+
+        // Show spinner near the card.
+        $("#"+card_id+" .loader").show();
+
+        $.post("/payments/card/default/"+card_id+"/", {'csrfmiddlewaretoken':csrf_token},function(data){
+
+            // Hide the spinner near the card
+            $("#"+card_id+" .loader").hide();
+
+            // Remove the primary label and text for all cards
+            $(".label").removeClass("label-primary");
+            $(".label").html("Make Default");
+
+            // Add the primary label and text to this card
+            $("#"+card_id+" .label").html("Default");
+            $("#"+card_id+" .label").addClass("label-primary");
+
+            // Remove the row from its current position and move it to the top.
+            $("#"+card_id).hide().prependTo($('table &amp;gt; tbody')).fadeIn();
+
+
+
+            // Switch the card in the recharge drop down to the default card
+            $("#id_card_id").val(card_id);
+            set_default_running = false;
+        });
+    }
+
+    $('.confirm-delete').live('submit', function(e) {
+        e.preventDefault();
+
+        if ($(".credit-card-list tr").length==1 &amp;amp;&amp;amp; $("#id_auto_recharge").is(":checked")) {
+            if($("#delete-confirmation .modal-body h5").html().indexOf("If")!=0) {
+                $("#delete-confirmation .modal-body h5").prepend("If you remove this card, auto recharge will be disabled. ");
+            }
+        } else {
+            if($("#delete-confirmation .modal-body h5").html().indexOf("If")==0) {
+                var original_text = $("#delete-confirmation .modal-body h5").html();
+                $("#delete-confirmation .modal-body h5").html(original_text.substring(original_text.indexOf(".")+1));
+            }
+        }
+        var id = $(this).attr("card_id");
+        $("#delete-confirmation").data('id',id).modal('show');
+    });
+
+    $('#delete-confirmed').live("click",function() {
+        var id = $('#delete-confirmation').data('id');
+        $("#delete-confirmation .modal-footer button")[0].remove();
+        $("#delete-confirmation .btn-danger").button('loading');
+        $('[card_id='+id+']')[0].submit();
+    });
+
+    function save_auto_recharge (){
+        $btn = $(this);
+        if(!$("#id_recharge_below_amount").val()) {
+            show_payment_message("Select a different recharge below amount.","error");
+            return;
+        }
+        data = {'csrfmiddlewaretoken': csrf_token,
+                'auto_recharge': $("#id_auto_recharge").is(":checked"),
+                'recharge_amount': $("#id_recharge_amount").val(),
+                'recharge_below_amount': $("#id_recharge_below_amount").val()
+               };
+        if($("#id_auto_recharge").is(":checked"))
+            auto_recharge = 'True';
+        else
+            auto_recharge = 'False';
+        $btn.button('loading');
+        $.ajax({
+            type: 'POST',
+            data: $.param(data),
+            url: '/autorechargeoptions/',
+            contentType: "application/x-www-form-urlencoded;charset=utf-8",
+            success: function(data) {
+                $btn.button('reset');
+                show_payment_message("Auto recharge settings updated.","success");
+                
+            },
+            error: function(data){
+                $btn.button('reset');
+                data = JSON.parse(data.responseText);
+                show_payment_message(data.message,"error");
+            },
+        });
+    }
+    $("#id_auto_recharge_save").live("click", save_auto_recharge);
+
+    $("#recharge_now").click(function(e){
+        e.preventDefault();
+        var $btn = $(this);
+        $btn.button('loading');
+        data = {'csrfmiddlewaretoken': csrf_token,
+                'amount': $("#id_amount").val()};
+        var card_id = $("#id_card_id").val();
+        $.post('/payments/card/charge/'+card_id+'/', data, function(data) {
+            
+            show_payment_message(data.message,"success");
+            $btn.button('reset');
+        }).error(function(data){
+            data = JSON.parse(data.responseText);
+            show_payment_message(data.message,"error");
+            $btn.button('reset');
+        });
+    });
+
+    $('#add-credit-card-modal').on('hidden', function () {
+        $("#add-credit-card-modal input[type=text]").each(function() {
+            this.value="";
+        });
+        hide_error();
+    });
+    $('.credit-card-list').on('click','.card-verify', function () {
+      var $this = $(this);
+      var modal = $('#modal-card-verification');
+      var row = $this.closest('tr');
+      var lastFourDigit = "";
+      var chargeDate = "";
+      var cardId = $this.data('card-id');
+      var label = $this.text();
+      $this.text('Loading...');
+
+      $.ajax({
+        type: 'POST',
+        url: '/payments/card/generate-verification/',
+        data: { cardId: cardId, csrfmiddlewaretoken: csrf_token },
+        success: function(data) {
+          if(data.success) {
+            modal.data('card-id', cardId);
+            modal.data('charge-date', data.charge_date);
+            modal.data('last-four-digit', data.card_ending);
+
+            $('.modal-last-four-digit', modal).text(data.card_ending);
+            $('.modal-charge-date', modal).text(data.charge_date);
+
+            $('.alert', modal).addClass('hide');
+            $('.card-code', modal).val('');
+            $('.code-validation', modal).addClass('hide');
+            modal.find('input').val('');
+            modal.modal('show');
+          } else {
+            show_payment_message(data.message, 'error');
+          }
+        },
+        error: function(xhr) {
+          var data = JSON.parse(xhr.responseText);
+          show_payment_message(data.message, 'error');
+        },
+        fail: function() {
+          show_payment_message('Something went wrong please try again.', 'error');
+        },
+        complete: function() {
+          $this.text(label);
+        }
+      })
+    });
+
+    $('#btn-card-verify').on('click', function() {
+      var $this = $(this);
+      var modal = $this.closest('.modal');
+      var code = $('#card-code', modal).val();
+      var $codeErrorText = $('.code-validation', modal);
+      var $alert = $('.alert', modal);
+      if(!code) {
+        $codeErrorText.removeClass('hide')
+        return;
+      }
+      $codeErrorText.addClass('hide');
+      var cardId = modal.data('card-id');
+      var label = $this.text();
+      $this.prop('disabled', true).text('Loading...');
+
+      $.ajax({
+        type: 'POST',
+        url: '/payments/card/validate-verification/',
+        data: {
+          cardId: cardId,
+          code: code,
+          csrfmiddlewaretoken: csrf_token
+        },
+        success: function(data) {
+          if(data.success) {
+            show_payment_message(data.message, 'success');
+            recordCardVerification(code, true);
+            modal.modal('hide');
+            document.location.reload()
+          } else {
+            recordCardVerification(code, false);
+            if(data.remaining_attempts == 0) {
+              modal.modal('hide');
+              show_payment_message(data.message, 'error');
+              document.location.reload()
+            } else {
+                $alert.removeClass('hide').html(data.message);
+            }
+          }
+        },
+        error: function() {
+          $alert.removeClass('hide').html('Something went wrong please try again.')
+          recordCardVerification(code, false);
+        },
+        fail: function() {
+          $alert.removeClass('hide').html('Something went wrong please try again.')
+          recordCardVerification(code, false);
+        },
+        complete: function() {
+          $this.prop('disabled', false).text(label);
+          modal.find('input').val('');
+        }
+      })
+    })
+    function recordCardVerification(amount, status) {
+      
+    }
+&lt;/script&gt;
+
+
+
+&lt;script&gt;
+    $(document).ready(function(){
+        _kmq.push(['record', 'Viewed payments - tab opened page']);
+        });
+
+    $("#payment").click(function() {
+        _kmq.push(['record', 'Viewed payments - clicked on continue page']);
+    });
+&lt;/script&gt;
+
+
+
+
+&lt;script type="text/javascript"&gt;
+    _kmq.push(['identify', 'plivoiview@gmail.com', {
+        email    : 'plivoiview@gmail.com',
+        name     : 'Plivo Interview',
+        username : 'plivoiview@gmail.com',
+        created  : '1511136000',
+    }]);
+
+    heap.identify('plivoiview@gmail.com');
+
+&lt;/script&gt;
+
+
+&lt;script&gt;
+  var KS_KISSMETRICS_DATA_TRACKING_ENABLED =  false ;
+&lt;/script&gt;
+
+&lt;script src="https://plivostatic.s3.amazonaws.com/js/kissmetrics.js"&gt;&lt;/script&gt;
+
+
+&lt;/div&gt;
+
+
+&lt;iframe name="stripeXDM_default468677_provider" id="stripeXDM_default468677_provider" aria-hidden="true" src="https://js.stripe.com/v2/channel.html?stripe_xdm_e=https%3A%2F%2Fmanage.plivo.com&amp;amp;stripe_xdm_c=default468677&amp;amp;stripe_xdm_p=1#__stripe_transport__" frameborder="0" style="position: absolute; top: -2000px; left: 0px;"&gt;&lt;/iframe&gt;&lt;iframe src="https://js.stripe.com/v2/m/outer.html#referrer=https%3A%2F%2Fmanage.plivo.com%2Fsubaccount%2F&amp;amp;title=Plivo%20%7C%20Recharge&amp;amp;url=https%3A%2F%2Fmanage.plivo.com%2Fpayments%2Frecharge%2F&amp;amp;muid=dcb30e11-288a-4eb8-8086-5c72ed64c000&amp;amp;sid=93f5b318-683b-406e-b19f-52871f9a28bf&amp;amp;preview=false&amp;amp;" frameborder="0" allowtransparency="true" scrolling="no" tabindex="-1" aria-hidden="true" style="width: 1px !important; height: 1px !important; position: fixed !important; visibility: hidden !important; pointer-events: none !important;"&gt;&lt;/iframe&gt;&lt;div class="modal-backdrop fade in"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180512 13:38:26.750" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180512 13:38:26.299" endtime="20180512 13:38:26.750"></status>
+</kw>
+<msg timestamp="20180512 13:38:26.751" level="FAIL">Page should not have contained element 'xpath=//div[@id='coupon_error']'.</msg>
+<status status="FAIL" starttime="20180512 13:38:26.276" endtime="20180512 13:38:26.751"></status>
+</kw>
+<status status="FAIL" starttime="20180512 13:38:26.275" endtime="20180512 13:38:26.752"></status>
+</kw>
+<status status="FAIL" starttime="20180512 13:38:20.117" endtime="20180512 13:38:26.752"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20180512 13:38:20.116" endtime="20180512 13:38:26.752" critical="yes">Page should not have contained element 'xpath=//div[@id='coupon_error']'.</status>
+</test>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20180512 13:38:26.753" endtime="20180512 13:38:26.848"></status>
+</kw>
+<status status="PASS" starttime="20180512 13:38:26.753" endtime="20180512 13:38:26.848"></status>
+</kw>
+<doc>This suite is for testing the Redeem Coupon Functionality</doc>
+<status status="FAIL" starttime="20180512 13:38:00.602" endtime="20180512 13:38:26.848"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="1">Critical Tests</stat>
+<stat pass="4" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="1">Smoke</stat>
+</tag>
+<suite>
+<stat pass="4" fail="1" id="s1" name="Plivo-CouponTesting-Positive">Plivo-CouponTesting-Positive</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
