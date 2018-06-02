@@ -2,7 +2,7 @@
 Documentation  This file contains all the locators and variables
 
 *** Variables ***
-${BROWSER} =  chrome
+${BROWSER} =  ff
 ${URL} =  https://manage.plivo.com/accounts/login/
 ${LANDING_PAGE_TEXT} =  Login
 ${LOGIN_USER_ID_TEXTBOX} =  id=id_username
@@ -22,7 +22,7 @@ ${PAYMENT_LINK} =  xpath=//a[@href='/payments/recharge/']
 ${PAYMENT_NAV_BAR_TEXT} =  Recharge
 ${ADD_CARD_MSG} =  Add a card
 ${COUPON_TEXT_BOX} =  //*[@id="coupon"]
-${COUPONCODE} =  COUPONCODE
+${COUPONCODE} =  ZMVINDE5MJCXNW
 ${COUPON_SUBMIT_BUTTON} =  xpath=//a[@onclick='activate_coupon()']
 ${COUPON_VALID_TEXT} =  This coupon code is valid.
 ${COUPON_INVALID_TEXT} =  This coupon code is invalid.

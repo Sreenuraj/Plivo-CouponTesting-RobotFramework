@@ -11,6 +11,7 @@ Verify Dash Nav Present
 Navigate to Payment Page
     Click Link  ${PAYMENT_LINK}
     Wait Until Page Contains  ${PAYMENT_NAV_BAR_TEXT}
+    sleep  3s
     Page Should Contain  ${ADD_CARD_MSG}
 
 

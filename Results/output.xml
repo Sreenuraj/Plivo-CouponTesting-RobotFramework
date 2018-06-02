@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.4 (Python 3.6.3 on darwin)" generated="20180512 13:38:00.600">
+<robot generator="Robot 3.0.4 (Python 3.6.3 on darwin)" generated="20180516 14:53:22.303">
 <suite id="s1" name="Plivo-CouponTesting-Positive" source="/Sreenu/Robort-Framework/Plivo-CouponTesting-RobotFramework/tests/Plivo-CouponTesting-Positive.robot">
 <kw name="Begin Web Test" library="Common" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
@@ -8,14 +8,14 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:00.727" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20180512 13:38:00.727" endtime="20180512 13:38:02.405"></status>
+<msg timestamp="20180516 14:53:22.432" level="INFO">Opening browser 'ff' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20180516 14:53:22.432" endtime="20180516 14:53:25.133"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20180512 13:38:02.405" endtime="20180512 13:38:02.527"></status>
+<status status="PASS" starttime="20180516 14:53:25.134" endtime="20180516 14:53:25.481"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:00.726" endtime="20180512 13:38:02.527"></status>
+<status status="PASS" starttime="20180516 14:53:22.432" endtime="20180516 14:53:25.481"></status>
 </kw>
 <test id="s1-t1" name="User should be able to &quot;login&quot;">
 <kw name="Login to the website" library="Plivo_app">
@@ -25,10 +25,10 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:02.529" level="INFO">Opening url 'https://manage.plivo.com/accounts/login/'</msg>
-<status status="PASS" starttime="20180512 13:38:02.529" endtime="20180512 13:38:07.724"></status>
+<msg timestamp="20180516 14:53:25.483" level="INFO">Opening url 'https://manage.plivo.com/accounts/login/'</msg>
+<status status="PASS" starttime="20180516 14:53:25.483" endtime="20180516 14:53:33.648"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:02.529" endtime="20180512 13:38:07.724"></status>
+<status status="PASS" starttime="20180516 14:53:25.483" endtime="20180516 14:53:33.649"></status>
 </kw>
 <kw name="Verify Page Loaded" library="LandingPage">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
@@ -36,25 +36,25 @@
 <arguments>
 <arg>${LANDING_PAGE_TEXT}</arg>
 </arguments>
-<status status="PASS" starttime="20180512 13:38:07.725" endtime="20180512 13:38:07.738"></status>
+<status status="PASS" starttime="20180516 14:53:33.649" endtime="20180516 14:53:33.665"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>${LOGIN_USER_ID_TEXTBOX}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:07.749" level="INFO">Current page contains element 'id=id_username'.</msg>
-<status status="PASS" starttime="20180512 13:38:07.738" endtime="20180512 13:38:07.749"></status>
+<msg timestamp="20180516 14:53:33.672" level="INFO">Current page contains element 'id=id_username'.</msg>
+<status status="PASS" starttime="20180516 14:53:33.665" endtime="20180516 14:53:33.673"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>${LOGIN_USER_PSW_TEXTBOX}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:07.760" level="INFO">Current page contains element 'id=id_password'.</msg>
-<status status="PASS" starttime="20180512 13:38:07.749" endtime="20180512 13:38:07.760"></status>
+<msg timestamp="20180516 14:53:33.677" level="INFO">Current page contains element 'id=id_password'.</msg>
+<status status="PASS" starttime="20180516 14:53:33.673" endtime="20180516 14:53:33.677"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:07.724" endtime="20180512 13:38:07.760"></status>
+<status status="PASS" starttime="20180516 14:53:33.649" endtime="20180516 14:53:33.677"></status>
 </kw>
 <kw name="Attempt Login with Valid Credentials" library="SignIn">
 <kw name="Input Text" library="SeleniumLibrary">
@@ -63,8 +63,8 @@
 <arg>${LOGIN_USER_ID_TEXTBOX}</arg>
 <arg>${USER_ID}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:07.761" level="INFO">Typing text 'plivoiview@gmail.com' into text field 'id=id_username'.</msg>
-<status status="PASS" starttime="20180512 13:38:07.761" endtime="20180512 13:38:07.867"></status>
+<msg timestamp="20180516 14:53:33.678" level="INFO">Typing text 'plivoiview@gmail.com' into text field 'id=id_username'.</msg>
+<status status="PASS" starttime="20180516 14:53:33.678" endtime="20180516 14:53:33.720"></status>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <doc>Types the given password into text field identified by ``locator``.</doc>
@@ -72,18 +72,18 @@
 <arg>${LOGIN_USER_PSW_TEXTBOX}</arg>
 <arg>${USER_PSW}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:07.868" level="INFO">Typing password into text field 'id=id_password'.</msg>
-<status status="PASS" starttime="20180512 13:38:07.868" endtime="20180512 13:38:07.935"></status>
+<msg timestamp="20180516 14:53:33.720" level="INFO">Typing password into text field 'id=id_password'.</msg>
+<status status="PASS" starttime="20180516 14:53:33.720" endtime="20180516 14:53:33.747"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${LOGIN_BUTTON}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:07.936" level="INFO">Clicking button 'id=login-sub'.</msg>
-<status status="PASS" starttime="20180512 13:38:07.936" endtime="20180512 13:38:08.005"></status>
+<msg timestamp="20180516 14:53:33.747" level="INFO">Clicking button 'id=login-sub'.</msg>
+<status status="PASS" starttime="20180516 14:53:33.747" endtime="20180516 14:53:33.985"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:07.760" endtime="20180512 13:38:08.005"></status>
+<status status="PASS" starttime="20180516 14:53:33.678" endtime="20180516 14:53:33.985"></status>
 </kw>
 <kw name="Verify Login Successful" library="SignIn">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
@@ -91,24 +91,24 @@
 <arguments>
 <arg>${DASHBOARD_TEXT}</arg>
 </arguments>
-<status status="PASS" starttime="20180512 13:38:08.005" endtime="20180512 13:38:13.391"></status>
+<status status="PASS" starttime="20180516 14:53:33.986" endtime="20180516 14:53:35.470"></status>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>${DASHBOARD_TEXT}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:13.399" level="INFO">Current page contains text 'Dashboard'.</msg>
-<status status="PASS" starttime="20180512 13:38:13.391" endtime="20180512 13:38:13.399"></status>
+<msg timestamp="20180516 14:53:35.477" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" starttime="20180516 14:53:35.470" endtime="20180516 14:53:35.477"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:08.005" endtime="20180512 13:38:13.399"></status>
+<status status="PASS" starttime="20180516 14:53:33.986" endtime="20180516 14:53:35.478"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:02.528" endtime="20180512 13:38:13.399"></status>
+<status status="PASS" starttime="20180516 14:53:25.482" endtime="20180516 14:53:35.478"></status>
 </kw>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="PASS" starttime="20180512 13:38:02.527" endtime="20180512 13:38:13.400" critical="yes"></status>
+<status status="PASS" starttime="20180516 14:53:25.481" endtime="20180516 14:53:35.478" critical="yes"></status>
 </test>
 <test id="s1-t2" name="User should be able to able to go to &quot;Account&quot; page">
 <kw name="Navigate to Account Page" library="Plivo_app">
@@ -118,17 +118,17 @@
 <arguments>
 <arg>${LOGIN_NAV_BAR}</arg>
 </arguments>
-<status status="PASS" starttime="20180512 13:38:13.402" endtime="20180512 13:38:13.413"></status>
+<status status="PASS" starttime="20180516 14:53:35.480" endtime="20180516 14:53:36.964"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>${ACCOUNT_LINK}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:13.425" level="INFO">Current page contains element 'xpath=//div[@id='wrapper']//a[contains(text(),'Account')]'.</msg>
-<status status="PASS" starttime="20180512 13:38:13.413" endtime="20180512 13:38:13.425"></status>
+<msg timestamp="20180516 14:53:36.975" level="INFO">Current page contains element 'xpath=//div[@id='wrapper']//a[contains(text(),'Account')]'.</msg>
+<status status="PASS" starttime="20180516 14:53:36.965" endtime="20180516 14:53:36.975"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:13.401" endtime="20180512 13:38:13.425"></status>
+<status status="PASS" starttime="20180516 14:53:35.480" endtime="20180516 14:53:36.976"></status>
 </kw>
 <kw name="Navigate to Account Page" library="LoginNav">
 <kw name="Click Link" library="SeleniumLibrary">
@@ -136,32 +136,32 @@
 <arguments>
 <arg>${ACCOUNT_LINK}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:13.426" level="INFO">Clicking link 'xpath=//div[@id='wrapper']//a[contains(text(),'Account')]'.</msg>
-<status status="PASS" starttime="20180512 13:38:13.426" endtime="20180512 13:38:13.489"></status>
+<msg timestamp="20180516 14:53:36.976" level="INFO">Clicking link 'xpath=//div[@id='wrapper']//a[contains(text(),'Account')]'.</msg>
+<status status="PASS" starttime="20180516 14:53:36.976" endtime="20180516 14:53:38.679"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>${SUB_ACC_LINK_TEXT}</arg>
 </arguments>
-<status status="PASS" starttime="20180512 13:38:13.489" endtime="20180512 13:38:14.824"></status>
+<status status="PASS" starttime="20180516 14:53:38.679" endtime="20180516 14:53:38.692"></status>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>${SUB_ACC_LINK_TEXT}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:14.834" level="INFO">Current page contains text 'New Sub Account'.</msg>
-<status status="PASS" starttime="20180512 13:38:14.824" endtime="20180512 13:38:14.834"></status>
+<msg timestamp="20180516 14:53:38.706" level="INFO">Current page contains text 'New Sub Account'.</msg>
+<status status="PASS" starttime="20180516 14:53:38.692" endtime="20180516 14:53:38.707"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:13.425" endtime="20180512 13:38:14.834"></status>
+<status status="PASS" starttime="20180516 14:53:36.976" endtime="20180516 14:53:38.707"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:13.401" endtime="20180512 13:38:14.834"></status>
+<status status="PASS" starttime="20180516 14:53:35.479" endtime="20180516 14:53:38.707"></status>
 </kw>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="PASS" starttime="20180512 13:38:13.400" endtime="20180512 13:38:14.834" critical="yes"></status>
+<status status="PASS" starttime="20180516 14:53:35.479" endtime="20180516 14:53:38.707" critical="yes"></status>
 </test>
 <test id="s1-t3" name="User should be able to go to &quot;Payments&quot; page">
 <kw name="Navigate to Payment Page" library="Plivo_app">
@@ -171,10 +171,10 @@
 <arguments>
 <arg>${SUB_ACC_LINK_TEXT}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:14.844" level="INFO">Current page contains text 'New Sub Account'.</msg>
-<status status="PASS" starttime="20180512 13:38:14.836" endtime="20180512 13:38:14.844"></status>
+<msg timestamp="20180516 14:53:38.718" level="INFO">Current page contains text 'New Sub Account'.</msg>
+<status status="PASS" starttime="20180516 14:53:38.708" endtime="20180516 14:53:38.718"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:14.836" endtime="20180512 13:38:14.845"></status>
+<status status="PASS" starttime="20180516 14:53:38.708" endtime="20180516 14:53:38.718"></status>
 </kw>
 <kw name="Navigate to Payment Page" library="DashNavAccountPage">
 <kw name="Click Link" library="SeleniumLibrary">
@@ -182,32 +182,40 @@
 <arguments>
 <arg>${PAYMENT_LINK}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:14.845" level="INFO">Clicking link 'xpath=//a[@href='/payments/recharge/']'.</msg>
-<status status="PASS" starttime="20180512 13:38:14.845" endtime="20180512 13:38:14.904"></status>
+<msg timestamp="20180516 14:53:38.719" level="INFO">Clicking link 'xpath=//a[@href='/payments/recharge/']'.</msg>
+<status status="PASS" starttime="20180516 14:53:38.719" endtime="20180516 14:53:38.949"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>${PAYMENT_NAV_BAR_TEXT}</arg>
 </arguments>
-<status status="PASS" starttime="20180512 13:38:14.904" endtime="20180512 13:38:17.010"></status>
+<status status="PASS" starttime="20180516 14:53:38.949" endtime="20180516 14:53:40.019"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180516 14:53:43.020" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20180516 14:53:40.019" endtime="20180516 14:53:43.021"></status>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>${ADD_CARD_MSG}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:17.026" level="INFO">Current page contains text 'Add a card'.</msg>
-<status status="PASS" starttime="20180512 13:38:17.010" endtime="20180512 13:38:17.026"></status>
+<msg timestamp="20180516 14:53:43.033" level="INFO">Current page contains text 'Add a card'.</msg>
+<status status="PASS" starttime="20180516 14:53:43.021" endtime="20180516 14:53:43.034"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:14.845" endtime="20180512 13:38:17.026"></status>
+<status status="PASS" starttime="20180516 14:53:38.719" endtime="20180516 14:53:43.034"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:14.835" endtime="20180512 13:38:17.026"></status>
+<status status="PASS" starttime="20180516 14:53:38.708" endtime="20180516 14:53:43.034"></status>
 </kw>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="PASS" starttime="20180512 13:38:14.835" endtime="20180512 13:38:17.026" critical="yes"></status>
+<status status="PASS" starttime="20180516 14:53:38.707" endtime="20180516 14:53:43.034" critical="yes"></status>
 </test>
 <test id="s1-t4" name="User should be able to &quot;Redeem a Coupon&quot;">
 <kw name="Select redeem a coupon option" library="Plivo_app">
@@ -217,55 +225,55 @@
 <arguments>
 <arg>3s</arg>
 </arguments>
-<msg timestamp="20180512 13:38:20.030" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20180512 13:38:17.028" endtime="20180512 13:38:20.030"></status>
+<msg timestamp="20180516 14:53:46.036" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20180516 14:53:43.035" endtime="20180516 14:53:46.036"></status>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${REDEEM_COUPON_LINK}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:20.031" level="INFO">Clicking link 'xpath=//div[@class='redeem-no-card']/a[contains(text(),'Redeem a coupon code instead')]'.</msg>
-<status status="PASS" starttime="20180512 13:38:20.030" endtime="20180512 13:38:20.089"></status>
+<msg timestamp="20180516 14:53:46.037" level="INFO">Clicking link 'xpath=//div[@class='redeem-no-card']/a[contains(text(),'Redeem a coupon code instead')]'.</msg>
+<status status="PASS" starttime="20180516 14:53:46.037" endtime="20180516 14:53:46.292"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>${COUPON_ALERT_TEXT}</arg>
 </arguments>
-<status status="PASS" starttime="20180512 13:38:20.089" endtime="20180512 13:38:20.101"></status>
+<status status="PASS" starttime="20180516 14:53:46.293" endtime="20180516 14:53:46.307"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>${COUPON_INPUT_BOX}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:20.115" level="INFO">Current page contains element 'id=coupon'.</msg>
-<status status="PASS" starttime="20180512 13:38:20.102" endtime="20180512 13:38:20.115"></status>
+<msg timestamp="20180516 14:53:46.312" level="INFO">Current page contains element 'id=coupon'.</msg>
+<status status="PASS" starttime="20180516 14:53:46.307" endtime="20180516 14:53:46.312"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:17.028" endtime="20180512 13:38:20.115"></status>
+<status status="PASS" starttime="20180516 14:53:43.035" endtime="20180516 14:53:46.312"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:17.027" endtime="20180512 13:38:20.115"></status>
+<status status="PASS" starttime="20180516 14:53:43.035" endtime="20180516 14:53:46.313"></status>
 </kw>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="PASS" starttime="20180512 13:38:17.027" endtime="20180512 13:38:20.115" critical="yes"></status>
+<status status="PASS" starttime="20180516 14:53:43.034" endtime="20180516 14:53:46.313" critical="yes"></status>
 </test>
 <test id="s1-t5" name="User should be able to &quot;Enter the coupon and submit&quot;">
 <kw name="Redeem the coupon" library="Plivo_app">
 <kw name="Input Coupon and Submit" library="CouponAlert">
 <kw name="Select Window" library="SeleniumLibrary">
 <doc>Selects browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20180512 13:38:20.117" endtime="20180512 13:38:20.121"></status>
+<status status="PASS" starttime="20180516 14:53:46.314" endtime="20180516 14:53:46.321"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3s</arg>
 </arguments>
-<msg timestamp="20180512 13:38:23.122" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20180512 13:38:20.121" endtime="20180512 13:38:23.122"></status>
+<msg timestamp="20180516 14:53:49.324" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20180516 14:53:46.321" endtime="20180516 14:53:49.324"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -273,26 +281,26 @@
 <arg>${COUPON_INPUT_BOX}</arg>
 <arg>${COUPONCODE}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:23.123" level="INFO">Typing text 'COUPONCODE' into text field 'id=coupon'.</msg>
-<status status="PASS" starttime="20180512 13:38:23.122" endtime="20180512 13:38:23.208"></status>
+<msg timestamp="20180516 14:53:49.325" level="INFO">Typing text 'ZMVINDE5MJCXNW' into text field 'id=coupon'.</msg>
+<status status="PASS" starttime="20180516 14:53:49.324" endtime="20180516 14:53:49.359"></status>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${COUPON_SUBMIT_BUTTON}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:23.209" level="INFO">Clicking link 'xpath=//a[@onclick='activate_coupon()']'.</msg>
-<status status="PASS" starttime="20180512 13:38:23.209" endtime="20180512 13:38:23.271"></status>
+<msg timestamp="20180516 14:53:49.360" level="INFO">Clicking link 'xpath=//a[@onclick='activate_coupon()']'.</msg>
+<status status="PASS" starttime="20180516 14:53:49.359" endtime="20180516 14:53:49.592"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3s</arg>
 </arguments>
-<msg timestamp="20180512 13:38:26.274" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20180512 13:38:23.271" endtime="20180512 13:38:26.275"></status>
+<msg timestamp="20180516 14:53:52.595" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20180516 14:53:49.592" endtime="20180516 14:53:52.595"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:20.117" endtime="20180512 13:38:26.275"></status>
+<status status="PASS" starttime="20180516 14:53:46.314" endtime="20180516 14:53:52.595"></status>
 </kw>
 <kw name="Enter a Valid Coupon" library="CouponAlert">
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
@@ -300,28 +308,29 @@
 <arguments>
 <arg>${COUPON_ERROR_ELEMENT}</arg>
 </arguments>
-<msg timestamp="20180512 13:38:26.298" level="INFO">&lt;!DOCTYPE html&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;&lt;head&gt;
-        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
-        &lt;meta name="keywords" content="plivo, plivo.com, plivo cloud, voip, cloud telephony, api, plivo sip, hosted pbx, cloud pbx,&amp;#10;        freeswitch api, asterisk api, cloud ivr, ivr, open source twilio, twilio alternative" /&gt;
-        &lt;meta name="description" content="Plivo - Voice and SMS APIs" /&gt;
+<msg timestamp="20180516 14:53:52.621" level="INFO">&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;&lt;head&gt;
+        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+        &lt;meta name="keywords" content="plivo, plivo.com, plivo cloud, voip, cloud telephony, api, plivo sip, hosted pbx, cloud pbx,
+        freeswitch api, asterisk api, cloud ivr, ivr, open source twilio, twilio alternative"&gt;
+        &lt;meta name="description" content="Plivo - Voice and SMS APIs"&gt;
         &lt;title&gt;     Plivo |     Recharge &lt;/title&gt;
 
 
         
-        &lt;link href="https://plivostatic.s3.amazonaws.com/css/bootstrap.min.css" rel="stylesheet" /&gt;
-        &lt;link href="https://plivostatic.s3.amazonaws.com/css/style.css" rel="stylesheet" type="text/css" /&gt;
+        &lt;link href="https://plivostatic.s3.amazonaws.com/css/bootstrap.min.css" rel="stylesheet"&gt;
+        &lt;link href="https://plivostatic.s3.amazonaws.com/css/style.css" rel="stylesheet" type="text/css"&gt;
         
         &lt;!--link href="style/bootstrap-responsive.css" rel="stylesheet"--&gt;
 
         
         
-        &lt;link href="https://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic" rel="stylesheet" type="text/css" /&gt;
+        &lt;link href="https://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic" rel="stylesheet" type="text/css"&gt;
         
 
-        &lt;link rel="shortcut icon" href="https://plivostatic.s3.amazonaws.com/images/favicon-white-png.png" /&gt;
-        &lt;link rel="apple-touch-icon" href="https://plivostatic.s3.amazonaws.com/images/favicon-white-png.png" /&gt;
-        &lt;link rel="apple-touch-icon" sizes="72x72" href="https://plivostatic.s3.amazonaws.com/images/favicon-white-png.png" /&gt;
-        &lt;link rel="apple-touch-icon" sizes="114x114" href="https://plivostatic.s3.amazonaws.com/images/favicon-white-png.png" /&gt;
+        &lt;link rel="shortcut icon" href="https://plivostatic.s3.amazonaws.com/images/favicon-white-png.png"&gt;
+        &lt;link rel="apple-touch-icon" href="https://plivostatic.s3.amazonaws.com/images/favicon-white-png.png"&gt;
+        &lt;link rel="apple-touch-icon" sizes="72x72" href="https://plivostatic.s3.amazonaws.com/images/favicon-white-png.png"&gt;
+        &lt;link rel="apple-touch-icon" sizes="114x114" href="https://plivostatic.s3.amazonaws.com/images/favicon-white-png.png"&gt;
 
         &lt;style&gt;
             .uln { border-bottom: solid;}
@@ -356,7 +365,7 @@
         &lt;!-- Kissmetrics end --&gt;
         &lt;!-- Heap analytics --&gt;
         &lt;script type="text/javascript"&gt;
-          window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c&amp;lt;p.length;c++)heap[p[c]]=o(p[c])};
+          window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c&lt;p.length;c++)heap[p[c]]=o(p[c])};
           heap.load("820114400");
         &lt;/script&gt;
         &lt;!-- Heap end --&gt;
@@ -377,7 +386,7 @@
                 &lt;div class="span5"&gt;
                     &lt;div class="span3"&gt;
                         &lt;div class="logo"&gt;
-                            &lt;a href="/dashboard/"&gt;&lt;img style="max-width:110%;width: 132px;height: 40px;" src="https://plivostatic.s3.amazonaws.com/images/logo.png" alt="" /&gt;&lt;/a&gt;
+                            &lt;a href="/dashboard/"&gt;&lt;img style="max-width:110%;width: 132px;height: 40px;" src="https://plivostatic.s3.amazonaws.com/images/logo.png" alt=""&gt;&lt;/a&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -465,21 +474,21 @@
         &lt;h5&gt;You do not have any saved cards. Add a credit card to recharge or enable auto recharge. &lt;/h5&gt;
         
         &lt;div&gt;&lt;a href="#add-credit-card-modal" class="btn btn-success no-card-add-card" data-toggle="modal"&gt;Add Credit Card&lt;/a&gt;&lt;/div&gt;
-	&lt;div class="redeem-no-card"&gt;&lt;a href="javascript:void(0);" onclick="show_modal()"&gt;Redeem a coupon code instead&lt;/a&gt;&lt;/div&gt;
+	&lt;div class="redeem-no-card"&gt;&lt;a href="javascript:void(0);" onclick="show_modal()" style=""&gt;Redeem a coupon code instead&lt;/a&gt;&lt;/div&gt;
     
 &lt;/div&gt;
 
-&lt;div class="modal hide fade in" id="myModal" aria-hidden="false" style="display: block;"&gt;
+&lt;div class="modal hide fade in" id="myModal" style="display: block;" aria-hidden="false"&gt;
     &lt;div class="modal-header"&gt;
         &lt;a class="close" data-dismiss="modal"&gt;×&lt;/a&gt;
         &lt;h3&gt;Redeem your coupon&lt;/h3&gt;
     &lt;/div&gt;
     &lt;div class="modal-body" id="modbody"&gt;
-        &lt;div class="alert alert-error" id="coupon_error" style="display: block;"&gt;This coupon code is invalid.&lt;/div&gt;
-        &lt;input id="coupon" class="large" type="text" maxlength="20" placeholder="Coupon Code" /&gt;
+        &lt;div class="alert alert-success" id="coupon_error" style="display: block;"&gt;Coupon has been applied successfully. Your credits have been updated.&lt;/div&gt;
+        &lt;input id="coupon" class="large" maxlength="20" placeholder="Coupon Code" style="" type="text"&gt;
     &lt;/div&gt;
     &lt;div class="modal-footer" id="modfooter"&gt;
-        &lt;a onclick="activate_coupon()" class="btn"&gt;Submit&lt;/a&gt;
+        &lt;a onclick="activate_coupon()" class="btn" style=""&gt;Submit&lt;/a&gt;
     &lt;/div&gt;
     &lt;div class="modal-footer" id="modfooter-success" style="display: none;"&gt;
         &lt;a onclick="$('#myModal').modal('toggle')" class="btn"&gt;Close&lt;/a&gt;
@@ -512,7 +521,7 @@
         &lt;div class="span4 pull-right text-left"&gt;&lt;strong&gt;Charge Date:&lt;/strong&gt; &lt;span class="modal-charge-date"&gt;&lt;/span&gt;&lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="m-t-40"&gt;
-        &lt;input type="text" id="card-code" placeholder="Amount (USD) / Code" class="p-10" /&gt;
+        &lt;input id="card-code" placeholder="Amount (USD) / Code" class="p-10" type="text"&gt;
         &lt;div class="field-validation code-validation hide"&gt;Please enter amount or code.&lt;/div&gt;
       &lt;/div&gt;
 
@@ -527,7 +536,7 @@
 &lt;div id="add-credit-card-modal" class="modal hide fade" tabindex="-1"&gt;
     &lt;div class="modal-dialog"&gt;
         &lt;form id="add-credit-card" class="modal-content"&gt;
-            &lt;div style="display:none"&gt;&lt;input type="hidden" name="csrfmiddlewaretoken" value="59a77530f6bbdddaab09197c99413953" /&gt;&lt;/div&gt;
+            &lt;div style="display:none"&gt;&lt;input name="csrfmiddlewaretoken" value="56298e94fd45767a77954f5464f51409" type="hidden"&gt;&lt;/div&gt;
             &lt;div class="modal-header"&gt;
                 &lt;a class="close" data-dismiss="modal"&gt;×&lt;/a&gt;
                 &lt;h3&gt;Add Credit Card&lt;/h3&gt;
@@ -536,27 +545,27 @@
               
                 &lt;div class="card-number"&gt;
                     &lt;label for="add-credit-card-card-num"&gt;Credit Card Number&lt;/label&gt;
-                    &lt;input type="text" name="card-number" id="add-credit-card-card-num" /&gt;
+                    &lt;input name="card-number" id="add-credit-card-card-num" type="text"&gt;
                 &lt;/div&gt;
 
                 &lt;div class="expiry"&gt;
                     &lt;label for="add-credit-card-exp"&gt;Expires&lt;/label&gt;
-                    &lt;input type="text" name="expiration" id="add-credit-card-exp" placeholder="MM/YY" /&gt;
+                    &lt;input name="expiration" id="add-credit-card-exp" placeholder="MM/YY" type="text"&gt;
                 &lt;/div&gt;
 
                 &lt;div class="cvv"&gt;
                     &lt;label for="add-credit-card-cvv"&gt;CVV&lt;/label&gt;
-                    &lt;input type="text" name="cvv" id="add-credit-card-cvv" placeholder="CVV" /&gt;
+                    &lt;input name="cvv" id="add-credit-card-cvv" placeholder="CVV" type="text"&gt;
                 &lt;/div&gt;
 
                 &lt;div class="holder-name"&gt;
                     &lt;label for="add-credit-card-name"&gt;Card Holder Name &lt;small&gt;(as shown on card)&lt;/small&gt;&lt;/label&gt;
-                    &lt;input type="text" name="name" id="add-credit-card-name" /&gt;
+                    &lt;input name="name" id="add-credit-card-name" type="text"&gt;
                 &lt;/div&gt;
 
                 &lt;div class="address"&gt;
                     &lt;label for="add-credit-card-addr"&gt;Street Address&lt;/label&gt;
-                    &lt;input type="text" name="address" id="add-credit-card-addr" /&gt;
+                    &lt;input name="address" id="add-credit-card-addr" type="text"&gt;
                 &lt;/div&gt;
 
                 &lt;div class="card-country"&gt;
@@ -1066,25 +1075,25 @@
 
                 &lt;div class="card-zip-code"&gt;
                     &lt;label for="add-credit-card-zip"&gt;Zip / Postal Code&lt;/label&gt;
-                    &lt;input type="text" name="zip-postal-code" id="add-credit-card-zip" /&gt;
+                    &lt;input name="zip-postal-code" id="add-credit-card-zip" type="text"&gt;
                 &lt;/div&gt;
                 &lt;div class="alert alert-error card-errors"&gt;&lt;/div&gt;
             &lt;/div&gt;
 
             &lt;footer class="modal-footer" id="form-footer"&gt;
 	      &lt;div class="accepted_cards"&gt;
-		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_american express.png" /&gt;
-		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_diners club.png" /&gt;
-		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_discover.png" /&gt;
-		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_jcb.png" /&gt;
-		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_mastercard.png" /&gt;
-		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_visa.png" /&gt;
+		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_american express.png"&gt;
+		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_diners club.png"&gt;
+		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_discover.png"&gt;
+		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_jcb.png"&gt;
+		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_mastercard.png"&gt;
+		&lt;img src="https://plivostatic.s3.amazonaws.com/img/card_visa.png"&gt;
 	      &lt;/div&gt;
                 &lt;button type="reset" class="btn" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
                 &lt;button type="submit" class="btn btn-success"&gt;Add&lt;/button&gt;
             &lt;/footer&gt;
             &lt;footer class="modal-footer" id="loader-footer"&gt;
-              &lt;img src="/static_media/images/ajax-loader.gif" /&gt;
+              &lt;img src="/static_media/images/ajax-loader.gif"&gt;
             &lt;/footer&gt;
         &lt;/form&gt;
     &lt;/div&gt;
@@ -1098,15 +1107,15 @@
         &lt;div class="container-fluid" id="footer"&gt;
             &lt;div class="footer"&gt;
 	      &lt;div class="span6 text-left pull-left" style="padding-top:7px;"&gt;
-		  © 2018 Plivo, Inc.   ·  
-		  &lt;a href="https://www.plivo.com/about/" target="_blank"&gt;About&lt;/a&gt;   ·  
-		  &lt;a href="https://status.plivo.com/" target="_blank"&gt;Service Status&lt;/a&gt;  ·  
+		  © 2018 Plivo, Inc. &amp;nbsp;&amp;nbsp;·&amp;nbsp;&amp;nbsp;
+		  &lt;a href="https://www.plivo.com/about/" target="_blank"&gt;About&lt;/a&gt; &amp;nbsp;&amp;nbsp;·&amp;nbsp;&amp;nbsp;
+		  &lt;a href="https://status.plivo.com/" target="_blank"&gt;Service Status&lt;/a&gt;&amp;nbsp;&amp;nbsp;·&amp;nbsp;&amp;nbsp;
 		  &lt;a href="https://www.plivo.com/blog/" target="_blank"&gt;Blog&lt;/a&gt;
 	      &lt;/div&gt;
 	      &lt;div class="span1 text-center"&gt;&lt;/div&gt;
 	      &lt;div class="span5 text-right pull-right" style="padding-top:7px;"&gt;
-		  &lt;a href="/pricing/" target="_blank"&gt;Pricing&lt;/a&gt;   ·  
-		  &lt;a href="https://www.plivo.com/faq/" target="_blank"&gt;FAQs&lt;/a&gt;   ·  
+		  &lt;a href="/pricing/" target="_blank"&gt;Pricing&lt;/a&gt; &amp;nbsp;&amp;nbsp;·&amp;nbsp;&amp;nbsp;
+		  &lt;a href="https://www.plivo.com/faq/" target="_blank"&gt;FAQs&lt;/a&gt; &amp;nbsp;&amp;nbsp;·&amp;nbsp;&amp;nbsp;
 		  &lt;a href="https://www.plivo.com/contact/support/" target="_blank"&gt;Support&lt;/a&gt;
 	      &lt;/div&gt;
             &lt;/div&gt;
@@ -1167,45 +1176,45 @@
               hide_error();
               var credit_card_number = get_number($("#add-credit-card-card-num").val());
               if (!$("#add-credit-card-card-num").val()){
-                    show_error("&amp;lt;p&amp;gt;Please enter the card number.&amp;lt;/p&amp;gt;");
+                    show_error("&lt;p&gt;Please enter the card number.&lt;/p&gt;");
                     return false
               } else if (!credit_card_number) {
-		    show_error("&amp;lt;p&amp;gt;Invalid card number.&amp;lt;/p&amp;gt;");
+		    show_error("&lt;p&gt;Invalid card number.&lt;/p&gt;");
                     return false
 	      }
               if (!$("#add-credit-card-exp").val()){
-                    show_error("&amp;lt;p&amp;gt;Please enter the expiry date.&amp;lt;/p&amp;gt;");
+                    show_error("&lt;p&gt;Please enter the expiry date.&lt;/p&gt;");
                     return false
               }
               var expiry_date = get_number($("#add-credit-card-exp").val().replace("/",""));
               if(expiry_date.length!=4) {
-                    show_error("&amp;lt;p&amp;gt;The expiry date is not valid.&amp;lt;/p&amp;gt;");
+                    show_error("&lt;p&gt;The expiry date is not valid.&lt;/p&gt;");
                     return false
               }
               var expiry_month = expiry_date.substring(0,2);
               var expiry_year = expiry_date.substring(2,4);
               var cvv = get_number($("#add-credit-card-cvv").val());
               if (!$("#add-credit-card-cvv").val()) {
-                    show_error("&amp;lt;p&amp;gt;Please enter the CVV.&amp;lt;/p&amp;gt;");
+                    show_error("&lt;p&gt;Please enter the CVV.&lt;/p&gt;");
                     return false
               } else if (!cvv) {
-		    show_error("&amp;lt;p&amp;gt;Invalid CVV.&amp;lt;/p&amp;gt;");
+		    show_error("&lt;p&gt;Invalid CVV.&lt;/p&gt;");
                     return false
 	      }
               if (!$("#add-credit-card-name").val()){
-                    show_error("&amp;lt;p&amp;gt;Please enter the name on the card.&amp;lt;/p&amp;gt;");
+                    show_error("&lt;p&gt;Please enter the name on the card.&lt;/p&gt;");
                     return false
               }
               if (!$("#add-credit-card-addr").val()){
-                    show_error("&amp;lt;p&amp;gt;Please enter your address.&amp;lt;/p&amp;gt;");
+                    show_error("&lt;p&gt;Please enter your address.&lt;/p&gt;");
                     return false
               }
               var zip_code = $("#add-credit-card-zip").val();
               if (!$("#add-credit-card-zip").val()){
-                    show_error("&amp;lt;p&amp;gt;Please enter your zip code.&amp;lt;/p&amp;gt;");
+                    show_error("&lt;p&gt;Please enter your zip code.&lt;/p&gt;");
                     return false
               } else if (!zip_code) {
-		    show_error("&amp;lt;p&amp;gt;Invalid zip code.&amp;lt;/p&amp;gt;");
+		    show_error("&lt;p&gt;Invalid zip code.&lt;/p&gt;");
                     return false
 	      }
               bin_number = $("#add-credit-card-card-num").val().substring(0,6);
@@ -1236,12 +1245,12 @@
                     error: function(resp) {
                         resp = JSON.parse(resp.responseText);
                         hide_card_loader();
-                        show_error("&amp;lt;p&amp;gt;"+resp.message+"&amp;lt;/p&amp;gt;");
+                        show_error("&lt;p&gt;"+resp.message+"&lt;/p&gt;");
                     }
                   });
                 } else {
                   hide_card_loader();
-                  show_error("&amp;lt;p&amp;gt;"+response.error.message+"&amp;lt;/p&amp;gt;");
+                  show_error("&lt;p&gt;"+response.error.message+"&lt;/p&gt;");
                 }
               });
             return false;
@@ -1364,7 +1373,7 @@
             $("#"+card_id+" .label").addClass("label-primary");
 
             // Remove the row from its current position and move it to the top.
-            $("#"+card_id).hide().prependTo($('table &amp;gt; tbody')).fadeIn();
+            $("#"+card_id).hide().prependTo($('table &gt; tbody')).fadeIn();
 
 
 
@@ -1377,7 +1386,7 @@
     $('.confirm-delete').live('submit', function(e) {
         e.preventDefault();
 
-        if ($(".credit-card-list tr").length==1 &amp;amp;&amp;amp; $("#id_auto_recharge").is(":checked")) {
+        if ($(".credit-card-list tr").length==1 &amp;&amp; $("#id_auto_recharge").is(":checked")) {
             if($("#delete-confirmation .modal-body h5").html().indexOf("If")!=0) {
                 $("#delete-confirmation .modal-body h5").prepend("If you remove this card, auto recharge will be disabled. ");
             }
@@ -1599,33 +1608,33 @@
 &lt;/div&gt;
 
 
-&lt;iframe name="stripeXDM_default468677_provider" id="stripeXDM_default468677_provider" aria-hidden="true" src="https://js.stripe.com/v2/channel.html?stripe_xdm_e=https%3A%2F%2Fmanage.plivo.com&amp;amp;stripe_xdm_c=default468677&amp;amp;stripe_xdm_p=1#__stripe_transport__" frameborder="0" style="position: absolute; top: -2000px; left: 0px;"&gt;&lt;/iframe&gt;&lt;iframe src="https://js.stripe.com/v2/m/outer.html#referrer=https%3A%2F%2Fmanage.plivo.com%2Fsubaccount%2F&amp;amp;title=Plivo%20%7C%20Recharge&amp;amp;url=https%3A%2F%2Fmanage.plivo.com%2Fpayments%2Frecharge%2F&amp;amp;muid=dcb30e11-288a-4eb8-8086-5c72ed64c000&amp;amp;sid=93f5b318-683b-406e-b19f-52871f9a28bf&amp;amp;preview=false&amp;amp;" frameborder="0" allowtransparency="true" scrolling="no" tabindex="-1" aria-hidden="true" style="width: 1px !important; height: 1px !important; position: fixed !important; visibility: hidden !important; pointer-events: none !important;"&gt;&lt;/iframe&gt;&lt;div class="modal-backdrop fade in"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</msg>
+&lt;iframe name="stripeXDM_default229879_provider" id="stripeXDM_default229879_provider" aria-hidden="true" style="position: absolute; top: -2000px; left: 0px;" src="https://js.stripe.com/v2/channel.html?stripe_xdm_e=https%3A%2F%2Fmanage.plivo.com&amp;amp;stripe_xdm_c=default229879&amp;amp;stripe_xdm_p=1#__stripe_transport__" frameborder="0"&gt;&lt;/iframe&gt;&lt;iframe src="https://js.stripe.com/v2/m/outer.html#referrer=https%3A%2F%2Fmanage.plivo.com%2Fsubaccount%2F&amp;amp;title=Plivo%20%7C%20Recharge&amp;amp;url=https%3A%2F%2Fmanage.plivo.com%2Fpayments%2Frecharge%2F&amp;amp;muid=d9841f1d-d13a-44b5-9d0a-c870bf664b38&amp;amp;sid=2ed96a01-b258-4d8c-a60e-8bf076445e0f&amp;amp;preview=false&amp;amp;" style="width: 1px !important; height: 1px !important; position: fixed !important; visibility: hidden !important; pointer-events: none !important;" allowtransparency="true" scrolling="no" tabindex="-1" aria-hidden="true" frameborder="0"&gt;&lt;/iframe&gt;&lt;div class="modal-backdrop fade in"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</msg>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20180512 13:38:26.750" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20180512 13:38:26.299" endtime="20180512 13:38:26.750"></status>
+<msg timestamp="20180516 14:53:52.826" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180516 14:53:52.622" endtime="20180516 14:53:52.826"></status>
 </kw>
-<msg timestamp="20180512 13:38:26.751" level="FAIL">Page should not have contained element 'xpath=//div[@id='coupon_error']'.</msg>
-<status status="FAIL" starttime="20180512 13:38:26.276" endtime="20180512 13:38:26.751"></status>
+<msg timestamp="20180516 14:53:52.827" level="FAIL">Page should not have contained element 'xpath=//div[@id='coupon_error']'.</msg>
+<status status="FAIL" starttime="20180516 14:53:52.596" endtime="20180516 14:53:52.827"></status>
 </kw>
-<status status="FAIL" starttime="20180512 13:38:26.275" endtime="20180512 13:38:26.752"></status>
+<status status="FAIL" starttime="20180516 14:53:52.595" endtime="20180516 14:53:52.827"></status>
 </kw>
-<status status="FAIL" starttime="20180512 13:38:20.117" endtime="20180512 13:38:26.752"></status>
+<status status="FAIL" starttime="20180516 14:53:46.314" endtime="20180516 14:53:52.827"></status>
 </kw>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="FAIL" starttime="20180512 13:38:20.116" endtime="20180512 13:38:26.752" critical="yes">Page should not have contained element 'xpath=//div[@id='coupon_error']'.</status>
+<status status="FAIL" starttime="20180516 14:53:46.313" endtime="20180516 14:53:52.828" critical="yes">Page should not have contained element 'xpath=//div[@id='coupon_error']'.</status>
 </test>
 <kw name="End Web Test" library="Common" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20180512 13:38:26.753" endtime="20180512 13:38:26.848"></status>
+<status status="PASS" starttime="20180516 14:53:52.829" endtime="20180516 14:53:53.446"></status>
 </kw>
-<status status="PASS" starttime="20180512 13:38:26.753" endtime="20180512 13:38:26.848"></status>
+<status status="PASS" starttime="20180516 14:53:52.829" endtime="20180516 14:53:53.446"></status>
 </kw>
 <doc>This suite is for testing the Redeem Coupon Functionality</doc>
-<status status="FAIL" starttime="20180512 13:38:00.602" endtime="20180512 13:38:26.848"></status>
+<status status="FAIL" starttime="20180516 14:53:22.305" endtime="20180516 14:53:53.446"></status>
 </suite>
 <statistics>
 <total>
